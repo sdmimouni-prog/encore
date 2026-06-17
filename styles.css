@@ -31,7 +31,7 @@ body {
 }
 
 .collection-page {
-  --content: min(94vw, 806px);
+  --content: min(94vw, 1050px);
   min-width: 320px;
 }
 
@@ -875,7 +875,7 @@ textarea {
 }
 
 .footer-artboard {
-  width: min(100vw, 864px);
+  width: min(100vw, 1050px);
   height: auto;
   margin: 0 auto;
 }
@@ -959,14 +959,50 @@ textarea {
 }
 
 .collection-page-main {
-  width: min(100vw, 864px);
+  width: min(100vw, 1050px);
   margin: 0 auto;
-  padding-top: 60px;
+  padding-top: clamp(86px, 12.73vw, 134px);
 }
 
 .collection-page-artboard {
   width: 100%;
   height: auto;
+}
+
+.collection-page .site-header {
+  height: clamp(104px, 12.58vw, 132px);
+}
+
+.collection-page .header-inner {
+  width: min(94vw, 1050px);
+  grid-template-columns: clamp(145px, 18.1vw, 190px) 1fr clamp(116px, 12.95vw, 136px);
+  column-gap: clamp(10px, 1.7vw, 18px);
+}
+
+.collection-page .brand {
+  width: clamp(112px, 12.85vw, 135px);
+  margin-top: clamp(10px, 1.43vw, 15px);
+}
+
+.collection-page .main-nav {
+  gap: clamp(14px, 2.25vw, 24px);
+  margin-top: clamp(30px, 4.1vw, 43px);
+  transform: none;
+}
+
+.collection-page .main-nav a {
+  font-size: clamp(8px, 0.95vw, 10px);
+}
+
+.collection-page .main-nav a.active::after {
+  bottom: clamp(-10px, -0.95vw, -8px);
+}
+
+.collection-page .quote-link {
+  width: clamp(116px, 12.95vw, 136px);
+  height: clamp(28px, 3.23vw, 34px);
+  margin-top: clamp(20px, 2.38vw, 25px);
+  font-size: clamp(8px, 0.86vw, 9px);
 }
 
 @media (min-width: 1200px) {
@@ -1308,5 +1344,37 @@ textarea {
   .btn-primary,
   .btn-ghost {
     width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  .collection-page .site-header {
+    height: 86px;
+  }
+
+  .collection-page .header-inner {
+    width: 100%;
+    padding: 0 20px;
+    grid-template-columns: 104px 1fr 44px;
+    column-gap: 0;
+  }
+
+  .collection-page .brand {
+    width: 96px;
+    margin-top: 8px;
+  }
+
+  .collection-page .main-nav {
+    top: 86px;
+    margin: 0;
+    gap: 14px;
+  }
+
+  .collection-page .main-nav a {
+    font-size: 10px;
+  }
+
+  .collection-page .main-nav a.active::after {
+    bottom: -5px;
   }
 }
