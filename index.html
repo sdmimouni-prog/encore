@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="ENCORE, collection vivante du Musée de l'Automobile du Maroc, propose des véhicules de collection pour mariages, tournages, publicités et événements."
+    >
+    <title>ENCORE - Collection vivante</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body data-page="home">
+    <div data-include="partials/header.html"></div>
+
+    <main id="accueil">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-picture" aria-hidden="true"></div>
+        <div class="hero-wash" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="hero-kicker">Les légendes</p>
+          <h1 id="hero-title">Reprennent<br>la route</h1>
+          <div class="ornament" aria-hidden="true"><span></span></div>
+          <p class="hero-subtitle">Collection vivante<br>du Musée de l'Automobile du Maroc</p>
+          <p class="hero-copy">
+            Des véhicules d'exception pour les tournages,<br>
+            mariages et événements les plus mémorables.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#collection">Découvrir la collection</a>
+            <a class="btn btn-ghost" href="#devis">Demander un devis</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="Chiffres clés">
+        <div class="stats-inner">
+          <article class="stat-item">
+            <svg viewBox="0 0 56 28" aria-hidden="true">
+              <path d="M7 19h2.5M45.5 19H49M11 19c1.3-6 5.6-10 13.4-10h11.2c4.6 0 8.6 3.3 11.4 8.1l1 .1c2.4.3 4 1.1 4 2.4v2.1H4v-2.1c0-1.1 1-1.7 3-1.8l4.7-4.8c2-2 4.2-3 6.8-3h7.1" />
+              <circle cx="16" cy="22" r="4.5" />
+              <circle cx="41" cy="22" r="4.5" />
+              <path d="M24 10l-2 8M34 10l4 8M19 10l3 8h15" />
+            </svg>
+            <p class="stat-number">90<span>+</span></p>
+            <p class="stat-label">Véhicules<br>de collection</p>
+          </article>
+
+          <article class="stat-item">
+            <svg viewBox="0 0 42 42" aria-hidden="true">
+              <path d="M8 8h26v24H8zM8 15h26M14 5v7M28 5v7" />
+              <circle cx="30" cy="30" r="8" />
+              <path d="M30 25v5l4 2" />
+            </svg>
+            <p class="stat-number">50<span>+</span></p>
+            <p class="stat-label">Années<br>d'histoire</p>
+          </article>
+
+          <article class="stat-item">
+            <svg viewBox="0 0 44 42" aria-hidden="true">
+              <path d="M22 4l5 12 13 .8-10 8.3 3.4 12.5L22 30.7 10.6 37.6 14 25.1 4 16.8l13-.8z" />
+            </svg>
+            <p class="stat-number">5</p>
+            <p class="stat-label">Univers<br>d'exception</p>
+          </article>
+
+          <article class="stat-item">
+            <svg viewBox="0 0 44 44" aria-hidden="true">
+              <path d="M13 8h18v7c0 10-4.2 16.3-9 20-4.8-3.7-9-10-9-20z" />
+              <path d="M13 13H8v4c0 4.5 2.9 7.5 7.6 8.2M31 13h5v4c0 4.5-2.9 7.5-7.6 8.2M22 15v11M16.5 20.5h11" />
+            </svg>
+            <p class="stat-number">1</p>
+            <p class="stat-label">Collection unique<br>au Maroc</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="universes" aria-labelledby="universes-title">
+        <h2 class="section-title" id="universes-title"><span>Nos univers</span></h2>
+        <div class="universe-grid">
+          <article class="universe-card" id="cinema">
+            <a href="#devis" class="universe-card-link" data-event-type="Publicité" aria-label="Demander un devis pour Cinéma et Publicité">
+              <img src="assets/universe-cinema.png" alt="Cinéma &amp; Publicité - Films, séries, clips">
+            </a>
+          </article>
+          <article class="universe-card" id="mariages">
+            <a href="#devis" class="universe-card-link" data-event-type="Mariage" aria-label="Demander un devis pour Mariages">
+              <img src="assets/universe-mariages.png" alt="Mariages - Arrivées VIP, cortèges, shooting">
+            </a>
+          </article>
+          <article class="universe-card">
+            <a href="#devis" class="universe-card-link" data-event-type="Événement corporate" aria-label="Demander un devis pour Événementiel Corporate">
+              <img src="assets/universe-corporate.png" alt="Événementiel Corporate - Lancements, séminaires, festivals">
+            </a>
+          </article>
+          <article class="universe-card">
+            <a href="#devis" class="universe-card-link" data-event-type="Shooting photo" aria-label="Demander un devis pour Shooting Photo">
+              <img src="assets/universe-shooting.png" alt="Shooting Photo - Mode, lifestyle, immobilier, luxe">
+            </a>
+          </article>
+          <article class="universe-card" id="food-trucks">
+            <a href="#devis" class="universe-card-link" data-event-type="Food Trucks & Activations" aria-label="Demander un devis pour Food Trucks et Activations">
+              <img src="assets/universe-foodtrucks.png" alt="Food Trucks &amp; Activations - Roadshows, activations de marque">
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="collection" id="collection" aria-labelledby="collection-title">
+        <h2 class="section-title collection-title" id="collection-title">
+          <span>Une collection qui raconte l'histoire</span>
+        </h2>
+        <div class="collection-mosaic">
+          <div class="collection-column">
+            <a class="collection-tile" href="https://www.musee-automobile.ma/vehicule-rolls-royce-silver-wraith.html" target="_blank" rel="noopener" aria-label="Voir la fiche Rolls-Royce Silver Wraith 1949">
+              <img src="assets/collection/rolls-royce-silver-wraith-1949.jpg" alt="Rolls-Royce Silver Wraith 1949">
+            </a>
+            <a class="collection-tile" href="https://www.musee-automobile.ma/vehicule-citroen-hy.html" target="_blank" rel="noopener" aria-label="Voir la fiche Citroën HY">
+              <img src="assets/collection/citroen-hy.jpg" alt="Citroën HY 1979">
+            </a>
+          </div>
+          <a class="collection-tile collection-tile-large" href="https://www.musee-automobile.ma/vehicule-autocar-volvo-60.html" target="_blank" rel="noopener" aria-label="Voir la fiche Autocar Volvo 60">
+            <img src="assets/collection/autocar-volvo-60.jpg" alt="Autocar Volvo 60 1968">
+          </a>
+          <article class="collection-card" aria-label="90 véhicules de collection de 1920 à 1985">
+            <p class="collection-number">90<span>+</span></p>
+            <p class="collection-label">Véhicules<br>de collection</p>
+            <p class="collection-years">1920 <span></span> 1985</p>
+            <a href="https://www.musee-automobile.ma/collection.html#collection-grid" target="_blank" rel="noopener" class="collection-button">Explorer la collection</a>
+          </article>
+          <div class="collection-column">
+            <a class="collection-tile" href="https://www.musee-automobile.ma/vehicule-peugeot-403.html" target="_blank" rel="noopener" aria-label="Voir la fiche Peugeot 403">
+              <img src="assets/collection/peugeot-403.jpg" alt="Peugeot 403 1960">
+            </a>
+            <a class="collection-tile" href="https://www.musee-automobile.ma/vehicule-school-bus-ford-b700.html" target="_blank" rel="noopener" aria-label="Voir la fiche School Bus Ford B700">
+              <img src="assets/collection/school-bus-ford-b700.jpg" alt="School Bus Ford B700 1985">
+            </a>
+          </div>
+          <div class="collection-column">
+            <a class="collection-tile" href="https://www.musee-automobile.ma/vehicule-peugeot-404.html" target="_blank" rel="noopener" aria-label="Voir la fiche Peugeot 404">
+              <img src="assets/collection/peugeot-404.jpg" alt="Peugeot 404 1965">
+            </a>
+            <a class="collection-tile" href="https://www.musee-automobile.ma/vehicule-chevrolet-6400-master-truck.html" target="_blank" rel="noopener" aria-label="Voir la fiche Chevrolet 6400 Master Truck">
+              <img src="assets/collection/chevrolet-6400-master-truck.jpg" alt="Chevrolet 6400 Master Truck 1945">
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-request" id="apropos" aria-label="Sélection du conservateur et demande de devis">
+        <article class="curator-card">
+          <div class="curator-copy">
+            <p class="small-heading">Sélection du conservateur</p>
+            <h2>Rolls Royce<br>Silver Wraith</h2>
+            <p class="year">1952</p>
+            <p class="curator-text">
+              Symbole absolu du raffinement britannique.<br>
+              Une présence majestueuse pour des<br>
+              moments inoubliables.
+            </p>
+            <ul class="curator-list">
+              <li>Mariages d'exception</li>
+              <li>Tournages &amp; Cinéma</li>
+              <li>Événements prestigieux</li>
+            </ul>
+            <a href="#collection" class="vehicle-link">Voir la fiche du véhicule</a>
+          </div>
+          <div class="curator-media">
+            <img src="assets/rolls-curator.png" alt="Rolls Royce Silver Wraith 1952">
+            <div class="slider-dots" aria-hidden="true">
+              <span class="active"></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </article>
+
+        <section class="quote-panel" id="devis" aria-labelledby="quote-title">
+          <h2 class="section-title form-title" id="quote-title"><span>Demande de devis</span></h2>
+          <form class="quote-form" action="#" method="post" data-quote-form>
+            <div class="form-row">
+              <label>
+                <span>Type d'événement</span>
+                <select name="type" aria-label="Type d'événement">
+                  <option value="">Type d'événement</option>
+                  <option>Mariage</option>
+                  <option>Tournage cinéma</option>
+                  <option>Publicité</option>
+                  <option>Shooting photo</option>
+                  <option>Événement corporate</option>
+                  <option>Food Trucks &amp; Activations</option>
+                </select>
+              </label>
+              <label>
+                <span>Date de l'événement</span>
+                <input name="date" type="text" placeholder="Date de l'événement" aria-label="Date de l'événement">
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                <span>Ville / Lieu</span>
+                <input name="location" type="text" placeholder="Ville / Lieu">
+              </label>
+              <label>
+                <span>Nombre de véhicules souhaités</span>
+                <input name="vehicles" type="text" placeholder="Nombre de véhicules souhaités">
+              </label>
+            </div>
+            <label class="full-field">
+              <span>Votre budget indicatif</span>
+              <select name="budget" aria-label="Votre budget indicatif">
+                <option value="">Votre budget (indicatif)</option>
+                <option>Moins de 10 000 MAD</option>
+                <option>10 000 - 25 000 MAD</option>
+                <option>25 000 MAD et plus</option>
+              </select>
+            </label>
+            <label class="full-field">
+              <span>Votre message</span>
+              <textarea name="message" placeholder="Votre message" rows="4"></textarea>
+            </label>
+            <button class="submit-button" type="submit">Envoyer ma demande</button>
+            <p class="privacy-note">Réponse sous 24h - Service confidentiel</p>
+          </form>
+        </section>
+      </section>
+
+      <section class="partners" aria-labelledby="partners-title">
+        <h2 class="section-title partners-title" id="partners-title"><span>Ils nous font confiance</span></h2>
+        <div class="partner-logos">
+          <span class="partner wedding">Wedding<br>Planner</span>
+          <span class="partner bride"><em>the</em><br>Bride</span>
+          <span class="partner atlantic">Atlantic<br><small>Productions</small></span>
+          <span class="partner mark">2M✣</span>
+          <span class="partner publicis">Publicis<br><small>Maroc</small></span>
+          <span class="partner bossa">Bossa<br><small>Events</small></span>
+          <span class="partner more">&amp;<br><small>Bien d'autres</small></span>
+        </div>
+      </section>
+    </main>
+
+    <div data-include="partials/footer.html"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
