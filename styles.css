@@ -869,15 +869,191 @@ textarea {
 }
 
 .site-footer {
-  min-height: 73px;
+  min-height: 74px;
   color: #ffffff;
-  background: var(--footer);
+  background:
+    radial-gradient(circle at 18% 50%, rgba(212, 175, 55, 0.06), rgba(212, 175, 55, 0) 170px),
+    #24231e;
 }
 
 .footer-artboard {
   width: min(100vw, 1050px);
   height: auto;
   margin: 0 auto;
+}
+
+.home-footer {
+  min-height: 76px;
+}
+
+.home-footer-inner {
+  width: min(94vw, 1050px);
+  min-height: 76px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 300px 1fr 145px;
+  align-items: center;
+  gap: 32px;
+}
+
+.home-footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #b98a3a;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.home-footer-brand img {
+  width: 43px;
+  height: auto;
+}
+
+.home-footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 44px;
+}
+
+.home-footer-nav a {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 8px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.home-footer-social,
+.collection-social-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.home-footer-social a,
+.collection-social-links a {
+  width: 18px;
+  height: 18px;
+  display: grid;
+  place-items: center;
+}
+
+.home-footer-social svg,
+.collection-social-links svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.home-footer-social a:nth-child(2) svg,
+.home-footer-social a:nth-child(3) svg,
+.collection-social-links a:nth-child(2) svg,
+.collection-social-links a:nth-child(3) svg {
+  fill: #ffffff;
+  stroke: none;
+}
+
+.collection-footer {
+  min-height: 89px;
+}
+
+.collection-footer-inner {
+  width: min(100vw, 1050px);
+  min-height: 89px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 332px 203px 203px 160px;
+  align-items: center;
+  gap: 38px;
+  padding: 0 49px;
+}
+
+.collection-footer-brand {
+  display: grid;
+  grid-template-columns: 68px 1fr;
+  grid-template-rows: auto auto;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.collection-footer-brand img {
+  grid-row: 1 / 3;
+  width: 61px;
+  height: auto;
+}
+
+.collection-footer-wordmark {
+  align-self: end;
+  color: #ffffff;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 29px;
+  line-height: 0.85;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.collection-footer-tagline {
+  align-self: start;
+  margin-top: 7px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 7px;
+  font-weight: 700;
+  line-height: 1.28;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.collection-footer-column,
+.collection-footer-social {
+  display: grid;
+  align-content: center;
+}
+
+.collection-footer-column h2,
+.collection-footer-social h2 {
+  margin: 0 0 7px;
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.collection-footer-column a {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 7px;
+  font-weight: 600;
+  line-height: 1.32;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.collection-footer-social h2 {
+  margin-bottom: 13px;
+}
+
+.collection-social-links {
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.collection-social-links a {
+  width: 27px;
+  height: 27px;
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  border-radius: 50%;
+}
+
+.collection-social-links svg {
+  width: 14px;
+  height: 14px;
 }
 
 .footer-inner {
@@ -1348,6 +1524,58 @@ textarea {
 }
 
 @media (max-width: 760px) {
+  .home-footer,
+  .collection-footer {
+    min-height: 0;
+  }
+
+  .home-footer-inner,
+  .collection-footer-inner {
+    width: 100%;
+    min-height: 0;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 18px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+
+  .home-footer-brand {
+    justify-content: center;
+  }
+
+  .home-footer-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 22px;
+  }
+
+  .home-footer-social {
+    justify-content: center;
+  }
+
+  .collection-footer-brand {
+    grid-template-columns: 58px auto;
+    text-align: left;
+  }
+
+  .collection-footer-brand img {
+    width: 52px;
+  }
+
+  .collection-footer-wordmark {
+    font-size: 24px;
+  }
+
+  .collection-footer-column,
+  .collection-footer-social {
+    justify-items: center;
+  }
+
+  .collection-social-links {
+    justify-content: center;
+  }
+
   .collection-page .site-header {
     height: 86px;
   }
