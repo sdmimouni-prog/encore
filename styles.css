@@ -31,12 +31,10 @@ body {
 }
 
 .collection-page {
-  --content: min(94vw, 1050px);
   min-width: 320px;
 }
 
 .mariages-page {
-  --content: min(94vw, 1050px);
   min-width: 320px;
 }
 
@@ -1139,101 +1137,33 @@ textarea {
   stroke: none;
 }
 
-.collection-page-main {
-  width: min(100vw, 1050px);
-  margin: 0 auto;
-  padding-top: clamp(86px, 12.73vw, 134px);
-}
-
-.collection-page-artboard {
-  width: 100%;
-  height: auto;
-}
-
-.collection-page .site-header {
-  height: clamp(104px, 12.58vw, 132px);
-}
-
-.collection-page .header-inner {
-  width: min(94vw, 1050px);
-  grid-template-columns: clamp(145px, 18.1vw, 190px) 1fr clamp(116px, 12.95vw, 136px);
-  column-gap: clamp(10px, 1.7vw, 18px);
-}
-
-.collection-page .brand {
-  width: clamp(112px, 12.85vw, 135px);
-  margin-top: clamp(10px, 1.43vw, 15px);
-}
-
-.collection-page .main-nav {
-  gap: clamp(14px, 2.25vw, 24px);
-  margin-top: clamp(30px, 4.1vw, 43px);
-  transform: none;
-}
-
-.collection-page .main-nav a {
-  font-size: clamp(8px, 0.95vw, 10px);
-}
-
-.collection-page .main-nav a.active::after {
-  bottom: clamp(-10px, -0.95vw, -8px);
-}
-
-.collection-page .quote-link {
-  width: clamp(116px, 12.95vw, 136px);
-  height: clamp(28px, 3.23vw, 34px);
-  margin-top: clamp(20px, 2.38vw, 25px);
-  font-size: clamp(8px, 0.86vw, 9px);
-}
-
+.collection-page-main,
 .mariages-page-main {
-  width: min(100vw, 1050px);
+  width: 100%;
   margin: 0 auto;
   position: relative;
 }
 
-.mariages-page .site-header {
-  height: clamp(104px, 12.58vw, 132px);
+.collection-hero-wide {
+  padding-top: clamp(124px, 12vw, 216px);
 }
 
-.mariages-page .header-inner {
-  width: min(94vw, 1050px);
-  grid-template-columns: clamp(145px, 18.1vw, 190px) 1fr clamp(116px, 12.95vw, 136px);
-  column-gap: clamp(10px, 1.7vw, 18px);
+.collection-hero-wide img {
+  width: min(100vw, 1688px);
+  height: auto;
+  margin: 0 auto;
 }
 
-.mariages-page .brand {
-  width: clamp(112px, 12.85vw, 135px);
-  margin-top: clamp(10px, 1.43vw, 15px);
-}
-
-.mariages-page .main-nav {
-  gap: clamp(14px, 2.25vw, 24px);
-  margin-top: clamp(30px, 4.1vw, 43px);
-  transform: none;
-}
-
-.mariages-page .main-nav a {
-  font-size: clamp(8px, 0.95vw, 10px);
-}
-
-.mariages-page .main-nav a.active::after {
-  bottom: clamp(-10px, -0.95vw, -8px);
-}
-
-.mariages-page .quote-link {
-  width: clamp(116px, 12.95vw, 136px);
-  height: clamp(28px, 3.23vw, 34px);
-  margin-top: clamp(20px, 2.38vw, 25px);
-  border-color: #8d6124;
-  color: #ffffff;
-  background: #8d6124;
-  font-size: clamp(8px, 0.86vw, 9px);
+.collection-page-artboard {
+  width: min(100vw, 1050px);
+  height: auto;
+  margin: 0 auto;
 }
 
 .mariages-hero {
   position: relative;
-  height: clamp(386px, 43.55vw, 458px);
+  width: 100%;
+  height: clamp(430px, 42vw, 760px);
   overflow: hidden;
 }
 
@@ -1257,8 +1187,8 @@ textarea {
 .mariages-hero-content {
   position: absolute;
   z-index: 2;
-  left: clamp(38px, 4.85vw, 51px);
-  top: clamp(130px, 15.23vw, 160px);
+  left: max(49px, calc((100vw - var(--content)) / 2 + 48px));
+  top: clamp(155px, 15.7vw, 282px);
   width: clamp(260px, 31vw, 326px);
 }
 
@@ -1358,8 +1288,9 @@ textarea {
 }
 
 .mariages-page-artboard {
-  width: 100%;
+  width: min(100vw, 1050px);
   height: auto;
+  margin: 0 auto;
 }
 
 .page-anchor {
@@ -1764,64 +1695,8 @@ textarea {
     justify-content: center;
   }
 
-  .collection-page .site-header {
-    height: 86px;
-  }
-
-  .collection-page .header-inner {
-    width: 100%;
-    padding: 0 20px;
-    grid-template-columns: 104px 1fr 44px;
-    column-gap: 0;
-  }
-
-  .collection-page .brand {
-    width: 96px;
-    margin-top: 8px;
-  }
-
-  .collection-page .main-nav {
-    top: 86px;
-    margin: 0;
-    gap: 14px;
-  }
-
-  .collection-page .main-nav a {
-    font-size: 10px;
-  }
-
-  .collection-page .main-nav a.active::after {
-    bottom: -5px;
-  }
-
-  .mariages-page .site-header {
-    height: 86px;
-  }
-
-  .mariages-page .header-inner {
-    width: 100%;
-    padding: 0 20px;
-    grid-template-columns: 104px 1fr 44px;
-    column-gap: 0;
-  }
-
-  .mariages-page .brand {
-    width: 96px;
-    margin-top: 8px;
-  }
-
-  .mariages-page .main-nav {
-    top: 86px;
-    margin: 0;
-    gap: 14px;
-  }
-
-  .mariages-page .main-nav a {
-    font-size: 10px;
-  }
-
-  .mariages-page .main-nav a.active::after {
-    bottom: -5px;
+  .collection-hero-wide {
+    padding-top: 86px;
   }
 
   .mariages-hero {
