@@ -38,6 +38,10 @@ body {
   min-width: 320px;
 }
 
+.cinema-page {
+  min-width: 320px;
+}
+
 img,
 svg {
   display: block;
@@ -1138,23 +1142,27 @@ textarea {
 }
 
 .collection-page-main,
-.mariages-page-main {
+.mariages-page-main,
+.cinema-page-main {
   width: 100%;
   margin: 0 auto;
   position: relative;
 }
 
-.collection-hero-wide {
+.collection-hero-wide,
+.cinema-hero-wide {
   padding-top: clamp(124px, 12vw, 216px);
 }
 
-.collection-hero-wide img {
+.collection-hero-wide img,
+.cinema-hero-wide img {
   width: min(100vw, 1688px);
   height: auto;
   margin: 0 auto;
 }
 
-.collection-page-artboard {
+.collection-page-artboard,
+.cinema-page-artboard {
   width: min(100vw, 1050px);
   height: auto;
   margin: 0 auto;
@@ -1695,7 +1703,8 @@ textarea {
     justify-content: center;
   }
 
-  .collection-hero-wide {
+  .collection-hero-wide,
+  .cinema-hero-wide {
     padding-top: 86px;
   }
 
