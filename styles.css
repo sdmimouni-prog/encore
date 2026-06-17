@@ -35,6 +35,11 @@ body {
   min-width: 320px;
 }
 
+.mariages-page {
+  --content: min(94vw, 1050px);
+  min-width: 320px;
+}
+
 img,
 svg {
   display: block;
@@ -1181,6 +1186,189 @@ textarea {
   font-size: clamp(8px, 0.86vw, 9px);
 }
 
+.mariages-page-main {
+  width: min(100vw, 1050px);
+  margin: 0 auto;
+  position: relative;
+}
+
+.mariages-page .site-header {
+  height: clamp(104px, 12.58vw, 132px);
+}
+
+.mariages-page .header-inner {
+  width: min(94vw, 1050px);
+  grid-template-columns: clamp(145px, 18.1vw, 190px) 1fr clamp(116px, 12.95vw, 136px);
+  column-gap: clamp(10px, 1.7vw, 18px);
+}
+
+.mariages-page .brand {
+  width: clamp(112px, 12.85vw, 135px);
+  margin-top: clamp(10px, 1.43vw, 15px);
+}
+
+.mariages-page .main-nav {
+  gap: clamp(14px, 2.25vw, 24px);
+  margin-top: clamp(30px, 4.1vw, 43px);
+  transform: none;
+}
+
+.mariages-page .main-nav a {
+  font-size: clamp(8px, 0.95vw, 10px);
+}
+
+.mariages-page .main-nav a.active::after {
+  bottom: clamp(-10px, -0.95vw, -8px);
+}
+
+.mariages-page .quote-link {
+  width: clamp(116px, 12.95vw, 136px);
+  height: clamp(28px, 3.23vw, 34px);
+  margin-top: clamp(20px, 2.38vw, 25px);
+  border-color: #8d6124;
+  color: #ffffff;
+  background: #8d6124;
+  font-size: clamp(8px, 0.86vw, 9px);
+}
+
+.mariages-hero {
+  position: relative;
+  height: clamp(386px, 43.55vw, 458px);
+  overflow: hidden;
+}
+
+.mariages-hero-picture {
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/mariages-page/hero-mariages.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 52%;
+}
+
+.mariages-hero-wash {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, var(--cream) 0%, rgba(247, 243, 236, 0.97) 20%, rgba(247, 243, 236, 0.8) 31%, rgba(247, 243, 236, 0.32) 43%, rgba(247, 243, 236, 0) 56%),
+    linear-gradient(180deg, rgba(247, 243, 236, 0.9) 0%, rgba(247, 243, 236, 0.05) 26%, rgba(247, 243, 236, 0) 72%, rgba(247, 243, 236, 0.2) 100%);
+}
+
+.mariages-hero-content {
+  position: absolute;
+  z-index: 2;
+  left: clamp(38px, 4.85vw, 51px);
+  top: clamp(130px, 15.23vw, 160px);
+  width: clamp(260px, 31vw, 326px);
+}
+
+.mariages-hero h1 {
+  margin: 0 0 8px;
+  color: #8a581f;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(36px, 4.45vw, 47px);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.mariages-hero-subtitle {
+  margin: 0;
+  color: #191713;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(16px, 1.74vw, 18px);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.mariages-ornament {
+  width: 112px;
+  height: 12px;
+  margin: 15px 0 15px;
+  position: relative;
+}
+
+.mariages-ornament::before,
+.mariages-ornament::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  width: 47px;
+  height: 1px;
+  background: var(--bronze-soft);
+}
+
+.mariages-ornament::before {
+  left: 0;
+}
+
+.mariages-ornament::after {
+  right: 0;
+}
+
+.mariages-ornament span {
+  position: absolute;
+  top: 3px;
+  left: 53px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #8a581f;
+}
+
+.mariages-hero-copy {
+  margin: 0 0 24px;
+  color: #1f1b16;
+  font-size: clamp(11px, 1.12vw, 12px);
+  line-height: 1.58;
+}
+
+.mariages-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mariages-btn {
+  height: 32px;
+  display: inline-grid;
+  place-items: center;
+  padding: 0 13px;
+  border: 1px solid var(--bronze-soft);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.mariages-btn-primary {
+  min-width: 154px;
+  color: #ffffff;
+  background: #b67a2a;
+  border-color: #b67a2a;
+}
+
+.mariages-btn-ghost {
+  min-width: 124px;
+  color: #8a581f;
+  background: rgba(247, 243, 236, 0.72);
+}
+
+.mariages-page-artboard {
+  width: 100%;
+  height: auto;
+}
+
+.page-anchor {
+  display: block;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 @media (min-width: 1200px) {
   .universe-card {
     height: 246px;
@@ -1604,5 +1792,64 @@ textarea {
 
   .collection-page .main-nav a.active::after {
     bottom: -5px;
+  }
+
+  .mariages-page .site-header {
+    height: 86px;
+  }
+
+  .mariages-page .header-inner {
+    width: 100%;
+    padding: 0 20px;
+    grid-template-columns: 104px 1fr 44px;
+    column-gap: 0;
+  }
+
+  .mariages-page .brand {
+    width: 96px;
+    margin-top: 8px;
+  }
+
+  .mariages-page .main-nav {
+    top: 86px;
+    margin: 0;
+    gap: 14px;
+  }
+
+  .mariages-page .main-nav a {
+    font-size: 10px;
+  }
+
+  .mariages-page .main-nav a.active::after {
+    bottom: -5px;
+  }
+
+  .mariages-hero {
+    height: 430px;
+  }
+
+  .mariages-hero-picture {
+    background-position: 58% center;
+  }
+
+  .mariages-hero-wash {
+    background:
+      linear-gradient(180deg, rgba(247, 243, 236, 0.76) 0%, rgba(247, 243, 236, 0.92) 34%, rgba(247, 243, 236, 0.36) 100%),
+      linear-gradient(90deg, var(--cream) 0%, rgba(247, 243, 236, 0.74) 60%, rgba(247, 243, 236, 0) 100%);
+  }
+
+  .mariages-hero-content {
+    left: 24px;
+    top: 118px;
+    width: min(86vw, 310px);
+  }
+
+  .mariages-hero h1 {
+    font-size: 36px;
+  }
+
+  .mariages-hero-actions {
+    flex-wrap: wrap;
+    gap: 8px;
   }
 }
