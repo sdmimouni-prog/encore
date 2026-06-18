@@ -165,6 +165,50 @@ const initCinemaFilters = () => {
   });
 };
 
+const initWeddingFilters = () => {
+  const filterPanel = document.querySelector("[data-wedding-filters]");
+
+  if (!filterPanel) return;
+
+  const filterButtons = [...filterPanel.querySelectorAll("[data-wedding-filter]")];
+  const filterLinks = [...document.querySelectorAll("[data-wedding-filter-link]")];
+  const weddingItems = [...document.querySelectorAll("[data-wedding-item]")];
+  let activeFilter = "";
+
+  const getTags = (item) => (item.dataset.weddingTags || "").split(/\s+/).filter(Boolean);
+
+  const applyFilter = (filter) => {
+    activeFilter = activeFilter === filter ? "" : filter;
+
+    filterButtons.forEach((button) => {
+      const isActive = button.dataset.weddingFilter === activeFilter;
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-pressed", String(isActive));
+    });
+
+    weddingItems.forEach((item) => {
+      const isVisible = !activeFilter || getTags(item).includes(activeFilter);
+      item.classList.toggle("is-filter-hidden", !isVisible);
+    });
+  };
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      applyFilter(button.dataset.weddingFilter || "");
+    });
+  });
+
+  filterLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      const matchingButton = filterButtons.find((button) => button.dataset.weddingFilter === link.dataset.weddingFilterLink);
+
+      if (matchingButton && !matchingButton.classList.contains("is-active")) {
+        applyFilter(matchingButton.dataset.weddingFilter || "");
+      }
+    });
+  });
+};
+
 const initPage = async () => {
   try {
     await includePartials();
@@ -179,6 +223,7 @@ const initPage = async () => {
   initCollectionFilters();
   initCollectionScroller();
   initCinemaFilters();
+  initWeddingFilters();
 };
 
 initPage();

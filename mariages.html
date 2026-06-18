@@ -38,13 +38,295 @@
         </div>
       </section>
 
-      <img
-        class="mariages-page-artboard"
-        src="assets/mariages-page/mariages-content.png"
-        alt="Arrivées VIP, shooting photo, cortèges, expériences exclusives, véhicules mariage, inspirations et formulaire de devis"
-      >
-      <span id="vehicules-mariage" class="page-anchor" aria-hidden="true"></span>
-      <span id="devis-mariage" class="page-anchor" aria-hidden="true"></span>
+      <section class="wedding-page-content" aria-label="Prestations mariage, véhicules et demande de devis">
+        <svg class="wedding-page-symbols" aria-hidden="true">
+          <symbol id="wedding-icon-rings" viewBox="0 0 24 24">
+            <circle cx="9" cy="13" r="5"></circle>
+            <circle cx="15" cy="13" r="5"></circle>
+            <path d="M12 4l2 3h-4z"></path>
+          </symbol>
+          <symbol id="wedding-icon-camera" viewBox="0 0 24 24">
+            <path d="M4 8h4l2-3h4l2 3h4v11H4z"></path>
+            <circle cx="12" cy="14" r="4"></circle>
+          </symbol>
+          <symbol id="wedding-icon-users" viewBox="0 0 24 24">
+            <circle cx="9" cy="8" r="3"></circle>
+            <circle cx="17" cy="9" r="2.4"></circle>
+            <path d="M3 20a6 6 0 0 1 12 0M14 20a5 5 0 0 1 7-4"></path>
+          </symbol>
+          <symbol id="wedding-icon-sparkles" viewBox="0 0 24 24">
+            <path d="M12 2l1.7 5.1L19 9l-5.3 1.9L12 16l-1.7-5.1L5 9l5.3-1.9zM5 14l.9 2.6L8.5 18l-2.6.9L5 21.5l-.9-2.6L1.5 18l2.6-1.4zM19 14l.9 2.6 2.6 1.4-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-1.4z"></path>
+          </symbol>
+          <symbol id="wedding-icon-diamond" viewBox="0 0 24 24">
+            <path d="M6 5h12l4 5-10 10L2 10z"></path>
+            <path d="M6 5l6 15 6-15M2 10h20"></path>
+          </symbol>
+          <symbol id="wedding-icon-crown" viewBox="0 0 24 24">
+            <path d="M4 18h16M5 16l1-9 5 5 1-8 5 8 5-5 1 9z"></path>
+          </symbol>
+          <symbol id="wedding-icon-temple" viewBox="0 0 24 24">
+            <path d="M3 8l9-5 9 5zM5 9v10M9 9v10M15 9v10M19 9v10M3 20h18"></path>
+          </symbol>
+          <symbol id="wedding-icon-car" viewBox="0 0 24 24">
+            <path d="M4 15l2-6h12l2 6"></path>
+            <path d="M3 15h18v4H3z"></path>
+            <circle cx="7" cy="19" r="2"></circle>
+            <circle cx="17" cy="19" r="2"></circle>
+          </symbol>
+          <symbol id="wedding-icon-chauffeur" viewBox="0 0 24 24">
+            <circle cx="12" cy="7" r="3"></circle>
+            <path d="M7 21a5 5 0 0 1 10 0M9 3h6M10 12l2 3 2-3"></path>
+          </symbol>
+          <symbol id="wedding-icon-star" viewBox="0 0 24 24">
+            <path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3 6.4 20.2 7.5 14 3 9.6l6.2-.9z"></path>
+          </symbol>
+          <symbol id="wedding-icon-calendar" viewBox="0 0 24 24">
+            <rect x="4" y="6" width="16" height="14" rx="1"></rect>
+            <path d="M8 3v5M16 3v5M4 11h16"></path>
+          </symbol>
+        </svg>
+
+        <section class="wedding-service-strip" aria-label="Prestations mariage">
+          <a href="#devis-mariage">
+            <svg><use href="#wedding-icon-rings"></use></svg>
+            <span><strong>Arrivées VIP</strong><em>Inoubliables</em></span>
+          </a>
+          <a href="#devis-mariage">
+            <svg><use href="#wedding-icon-camera"></use></svg>
+            <span><strong>Shooting photo</strong><em>Parfaits souvenirs</em></span>
+          </a>
+          <a href="#devis-mariage">
+            <svg><use href="#wedding-icon-users"></use></svg>
+            <span><strong>Cortèges</strong><em>Élégants et raffinés</em></span>
+          </a>
+          <a href="#devis-mariage">
+            <svg><use href="#wedding-icon-sparkles"></use></svg>
+            <span><strong>Expériences exclusives</strong><em>Sur mesure</em></span>
+          </a>
+        </section>
+
+        <section class="wedding-finder" aria-labelledby="wedding-finder-title" data-wedding-filters>
+          <h2 id="wedding-finder-title"><span>Trouvez le véhicule idéal pour votre mariage</span></h2>
+          <div class="wedding-finder-actions">
+            <button type="button" class="wedding-filter-card" data-wedding-filter="traditionnel" aria-pressed="false">
+              <span class="wedding-radio" aria-hidden="true"></span>
+              <svg><use href="#wedding-icon-diamond"></use></svg>
+              <span>Mariage<br>traditionnel</span>
+            </button>
+            <button type="button" class="wedding-filter-card" data-wedding-filter="moderne" aria-pressed="false">
+              <span class="wedding-radio" aria-hidden="true"></span>
+              <svg><use href="#wedding-icon-rings"></use></svg>
+              <span>Mariage<br>moderne</span>
+            </button>
+            <button type="button" class="wedding-filter-card" data-wedding-filter="luxe" aria-pressed="false">
+              <span class="wedding-radio" aria-hidden="true"></span>
+              <svg><use href="#wedding-icon-crown"></use></svg>
+              <span>Mariage<br>de luxe</span>
+            </button>
+            <button type="button" class="wedding-filter-card" data-wedding-filter="shooting" aria-pressed="false">
+              <span class="wedding-radio" aria-hidden="true"></span>
+              <svg><use href="#wedding-icon-camera"></use></svg>
+              <span>Shooting<br>couple</span>
+            </button>
+            <button type="button" class="wedding-filter-card" data-wedding-filter="cortege" aria-pressed="false">
+              <span class="wedding-radio" aria-hidden="true"></span>
+              <svg><use href="#wedding-icon-users"></use></svg>
+              <span>Cortège<br>VIP</span>
+            </button>
+            <a class="wedding-finder-submit" href="#vehicules-mariage">Voir les véhicules <span aria-hidden="true">›</span></a>
+          </div>
+        </section>
+
+        <section class="wedding-section" id="vehicules-mariage" aria-labelledby="wedding-vehicles-title">
+          <div class="wedding-section-heading">
+            <h2 id="wedding-vehicles-title"><span>Nos véhicules mariage</span></h2>
+            <a href="https://www.musee-automobile.ma/collection.html#collection-grid">Voir tous les véhicules <span aria-hidden="true">›</span></a>
+          </div>
+          <div class="wedding-vehicle-grid">
+            <article class="wedding-vehicle-card" data-wedding-item data-wedding-tags="traditionnel luxe shooting cortege">
+              <a href="https://www.musee-automobile.ma/vehicule-rolls-royce-silver-wraith.html" aria-label="Voir la fiche Rolls Royce Silver Wraith">
+                <img src="assets/mariages-page/cards/rolls-royce-silver-wraith.jpg" alt="Rolls Royce Silver Wraith" loading="lazy">
+                <span class="wedding-vehicle-body">
+                  <strong>Rolls Royce<br>Silver Wraith</strong>
+                  <em>1948</em>
+                  <span class="wedding-card-icons" aria-hidden="true">
+                    <svg><use href="#wedding-icon-rings"></use></svg>
+                    <svg><use href="#wedding-icon-camera"></use></svg>
+                    <svg><use href="#wedding-icon-star"></use></svg>
+                  </span>
+                </span>
+              </a>
+            </article>
+            <article class="wedding-vehicle-card" data-wedding-item data-wedding-tags="moderne shooting cortege">
+              <a href="https://www.musee-automobile.ma/vehicule-cadillac-eldorado-5e-generation.html" aria-label="Voir la fiche Cadillac Series 62">
+                <img src="assets/mariages-page/cards/cadillac-series-62.jpg" alt="Cadillac Series 62" loading="lazy">
+                <span class="wedding-vehicle-body">
+                  <strong>Cadillac<br>Series 62</strong>
+                  <em>1952</em>
+                  <span class="wedding-card-icons" aria-hidden="true">
+                    <svg><use href="#wedding-icon-rings"></use></svg>
+                    <svg><use href="#wedding-icon-camera"></use></svg>
+                    <svg><use href="#wedding-icon-star"></use></svg>
+                  </span>
+                </span>
+              </a>
+            </article>
+            <article class="wedding-vehicle-card" data-wedding-item data-wedding-tags="luxe moderne cortege">
+              <a href="https://www.musee-automobile.ma/vehicule-mercedes-benz-220-b-usa.html" aria-label="Voir la fiche Mercedes-Benz 220S">
+                <img src="assets/mariages-page/cards/mercedes-benz-220s.jpg" alt="Mercedes-Benz 220S" loading="lazy">
+                <span class="wedding-vehicle-body">
+                  <strong>Mercedes-Benz<br>220S</strong>
+                  <em>1957</em>
+                  <span class="wedding-card-icons" aria-hidden="true">
+                    <svg><use href="#wedding-icon-rings"></use></svg>
+                    <svg><use href="#wedding-icon-camera"></use></svg>
+                    <svg><use href="#wedding-icon-star"></use></svg>
+                  </span>
+                </span>
+              </a>
+            </article>
+            <article class="wedding-vehicle-card" data-wedding-item data-wedding-tags="moderne shooting">
+              <a href="https://www.musee-automobile.ma/collection.html#collection-grid" aria-label="Voir la fiche Buick Roadmaster">
+                <img src="assets/mariages-page/cards/buick-roadmaster.jpg" alt="Buick Roadmaster" loading="lazy">
+                <span class="wedding-vehicle-body">
+                  <strong>Buick<br>Roadmaster</strong>
+                  <em>1947</em>
+                  <span class="wedding-card-icons" aria-hidden="true">
+                    <svg><use href="#wedding-icon-rings"></use></svg>
+                    <svg><use href="#wedding-icon-camera"></use></svg>
+                    <svg><use href="#wedding-icon-star"></use></svg>
+                  </span>
+                </span>
+              </a>
+            </article>
+            <article class="wedding-vehicle-card" data-wedding-item data-wedding-tags="traditionnel shooting cortege">
+              <a href="https://www.musee-automobile.ma/vehicule-citroen-traction-11bl.html" aria-label="Voir la fiche Citroën Traction Avant">
+                <img src="assets/mariages-page/cards/citroen-traction-avant.jpg" alt="Citroën Traction Avant" loading="lazy">
+                <span class="wedding-vehicle-body">
+                  <strong>Citroën<br>Traction Avant</strong>
+                  <em>1952</em>
+                  <span class="wedding-card-icons" aria-hidden="true">
+                    <svg><use href="#wedding-icon-rings"></use></svg>
+                    <svg><use href="#wedding-icon-camera"></use></svg>
+                    <svg><use href="#wedding-icon-star"></use></svg>
+                  </span>
+                </span>
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <section class="wedding-section wedding-inspiration-section" aria-labelledby="wedding-inspirations-title">
+          <h2 class="wedding-line-title" id="wedding-inspirations-title"><span>Inspirations</span></h2>
+          <div class="wedding-inspiration-grid">
+            <a href="#devis-mariage" data-wedding-filter-link="traditionnel">
+              <img src="assets/mariages-page/cards/inspiration-marocain.jpg" alt="" loading="lazy">
+              <span>Mariage Marocain</span>
+            </a>
+            <a href="#devis-mariage" data-wedding-filter-link="moderne">
+              <img src="assets/mariages-page/cards/inspiration-occidental.jpg" alt="" loading="lazy">
+              <span>Mariage Occidental</span>
+            </a>
+            <a href="#devis-mariage" data-wedding-filter-link="shooting">
+              <img src="assets/mariages-page/cards/inspiration-jardin.jpg" alt="" loading="lazy">
+              <span>Mariage Jardin</span>
+            </a>
+            <a href="#devis-mariage" data-wedding-filter-link="luxe">
+              <img src="assets/mariages-page/cards/inspiration-palais.jpg" alt="" loading="lazy">
+              <span>Mariage Palais</span>
+            </a>
+            <a href="#devis-mariage" data-wedding-filter-link="cortege">
+              <img src="assets/mariages-page/cards/inspiration-musee.jpg" alt="" loading="lazy">
+              <span>Mariage Musée</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="wedding-section wedding-why-section" aria-labelledby="wedding-why-title">
+          <h2 class="wedding-line-title" id="wedding-why-title"><span>Pourquoi choisir ENCORE ?</span></h2>
+          <div class="wedding-why-grid">
+            <a href="#devis-mariage">
+              <svg><use href="#wedding-icon-temple"></use></svg>
+              <strong>Collection muséale</strong>
+              <span>Véhicules rares et authentiques</span>
+            </a>
+            <a href="#devis-mariage">
+              <svg><use href="#wedding-icon-car"></use></svg>
+              <strong>Véhicules entretenus</strong>
+              <span>Avec le plus grand soin</span>
+            </a>
+            <a href="#devis-mariage">
+              <svg><use href="#wedding-icon-chauffeur"></use></svg>
+              <strong>Chauffeur professionnel</strong>
+              <span>Discret et expérimenté</span>
+            </a>
+            <a href="#devis-mariage">
+              <svg><use href="#wedding-icon-camera"></use></svg>
+              <strong>Parfait pour les photos</strong>
+              <span>Un rendu exceptionnel</span>
+            </a>
+            <a href="#devis-mariage">
+              <svg><use href="#wedding-icon-star"></use></svg>
+              <strong>Expérience unique</strong>
+              <span>À vos côtés, du début à la fin</span>
+            </a>
+          </div>
+        </section>
+
+        <a class="wedding-testimonial" href="#devis-mariage" aria-label="Demander une arrivée en Rolls Royce">
+          <span class="wedding-testimonial-quote" aria-hidden="true">“</span>
+          <span class="wedding-testimonial-text">Notre arrivée à bord de la Rolls Royce<br>a marqué tous nos invités.</span>
+          <span class="wedding-testimonial-name">Imane &amp; Yassine <em>Mariés en 2024</em></span>
+          <img src="assets/mariages-page/cards/testimonial-couple.jpg" alt="" loading="lazy">
+        </a>
+
+        <section class="wedding-quote" id="devis-mariage" aria-label="Votre mariage mérite une légende">
+          <div class="wedding-quote-visual">
+            <h2>Votre mariage<br>mérite une légende</h2>
+            <p>Parlez-nous de votre projet et recevez<br>une offre sur mesure.</p>
+            <div class="mariages-ornament" aria-hidden="true"><span></span></div>
+            <img src="assets/mariages-page/cards/wedding-form-car.jpg" alt="Rolls Royce pour mariage" loading="lazy">
+          </div>
+          <form class="wedding-quote-form" data-quote-form>
+            <div class="wedding-form-grid">
+              <label>
+                <span>Date du mariage</span>
+                <input type="text" name="date" placeholder="JJ / MM / AAAA">
+              </label>
+              <label>
+                <span>Ville</span>
+                <input type="text" name="city" placeholder="Ville ou région">
+              </label>
+              <label>
+                <span>Type de mariage</span>
+                <select name="type">
+                  <option>Sélectionner</option>
+                  <option>Mariage traditionnel</option>
+                  <option>Mariage moderne</option>
+                  <option>Mariage de luxe</option>
+                  <option>Shooting couple</option>
+                  <option>Cortège VIP</option>
+                </select>
+              </label>
+              <label>
+                <span>Nombre de véhicules</span>
+                <select name="vehicles">
+                  <option>Sélectionner</option>
+                  <option>1 véhicule</option>
+                  <option>2 véhicules</option>
+                  <option>3 véhicules et plus</option>
+                </select>
+              </label>
+              <label>
+                <span>Téléphone</span>
+                <input type="tel" name="phone" placeholder="06 12 34 56 78">
+              </label>
+              <button type="submit">Recevoir mon devis</button>
+            </div>
+            <p class="wedding-form-note">Vos informations sont confidentielles.</p>
+          </form>
+        </section>
+      </section>
     </main>
 
     <div data-include="partials/footer.html"></div>
