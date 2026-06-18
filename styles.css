@@ -54,6 +54,10 @@ body {
   min-width: 320px;
 }
 
+.devis-page {
+  min-width: 320px;
+}
+
 img,
 svg {
   display: block;
@@ -146,6 +150,20 @@ textarea {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   background: rgba(247, 243, 236, 0.45);
+  transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.quote-link:hover,
+.quote-link:focus-visible,
+.quote-link.active {
+  color: #ffffff;
+  background: #9d621a;
+  border-color: #9d621a;
+}
+
+.quote-link:hover,
+.quote-link:focus-visible {
+  transform: translateY(-2px);
 }
 
 .menu-toggle {
@@ -1234,7 +1252,8 @@ textarea {
 .cinema-page-main,
 .food-trucks-page-main,
 .about-page-main,
-.contact-page-main {
+.contact-page-main,
+.devis-page-main {
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -4950,6 +4969,410 @@ a.contact-detail-item:focus-visible {
   outline-offset: 3px;
 }
 
+.devis-hero {
+  position: relative;
+  width: 100%;
+  height: clamp(430px, 42vw, 704px);
+  overflow: hidden;
+}
+
+.devis-hero-picture {
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/hero-rolls.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 56%;
+}
+
+.devis-hero-wash {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, var(--cream) 0%, rgba(247, 243, 236, 0.99) 22%, rgba(247, 243, 236, 0.84) 35%, rgba(247, 243, 236, 0.42) 47%, rgba(247, 243, 236, 0) 62%),
+    linear-gradient(180deg, rgba(247, 243, 236, 0.92) 0%, rgba(247, 243, 236, 0.08) 28%, rgba(247, 243, 236, 0) 72%, rgba(247, 243, 236, 0.32) 100%);
+}
+
+.devis-hero-content {
+  position: absolute;
+  z-index: 2;
+  left: max(54px, calc((100vw - var(--content)) / 2 + 54px));
+  top: clamp(178px, 16.7vw, 280px);
+  width: clamp(310px, 29vw, 430px);
+}
+
+.devis-hero h1 {
+  margin: 0;
+  color: #8a581f;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(46px, 4.65vw, 68px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.devis-hero-subtitle {
+  margin: 18px 0 0;
+  color: #15120f;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(18px, 1.85vw, 25px);
+  font-weight: 500;
+  line-height: 1.24;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.devis-ornament {
+  width: 112px;
+  height: 12px;
+  margin: 16px 0 17px;
+  position: relative;
+}
+
+.devis-ornament::before,
+.devis-ornament::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  width: 47px;
+  height: 1px;
+  background: var(--bronze-soft);
+}
+
+.devis-ornament::before {
+  left: 0;
+}
+
+.devis-ornament::after {
+  right: 0;
+}
+
+.devis-ornament span {
+  position: absolute;
+  top: 3px;
+  left: 53px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #8a581f;
+}
+
+.devis-hero-copy {
+  margin: 0;
+  color: #15120f;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(11px, 1.05vw, 14px);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.devis-page-content {
+  width: min(100vw, 1050px);
+  margin: 0 auto;
+  padding: 0 36px 34px;
+}
+
+.devis-page-symbols {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.devis-page-content svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.55;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.devis-intro {
+  min-height: 112px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: stretch;
+  margin: 0 0 22px;
+  border: 1px solid rgba(207, 173, 120, 0.34);
+  border-radius: 5px;
+  overflow: hidden;
+  background: rgba(247, 243, 236, 0.7);
+  box-shadow: 0 8px 22px rgba(65, 43, 24, 0.045);
+}
+
+.devis-intro a {
+  min-width: 0;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 11px;
+  padding: 18px 12px 16px;
+  color: #2b241d;
+  text-align: center;
+  transition: color 170ms ease, background-color 170ms ease, transform 170ms ease, box-shadow 170ms ease;
+}
+
+.devis-intro a + a {
+  border-left: 1px solid rgba(207, 173, 120, 0.3);
+}
+
+.devis-intro svg {
+  width: 31px;
+  height: 31px;
+  color: #9d621a;
+  transition: transform 170ms ease;
+}
+
+.devis-intro span {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.devis-intro a:hover,
+.devis-intro a:focus-visible {
+  color: #8a581f;
+  background: rgba(255, 255, 255, 0.48);
+  box-shadow: inset 0 -3px 0 rgba(157, 98, 26, 0.55);
+  transform: translateY(-2px);
+}
+
+.devis-intro a:hover svg,
+.devis-intro a:focus-visible svg {
+  transform: scale(1.08);
+}
+
+.devis-layout {
+  display: grid;
+  grid-template-columns: 0.86fr 1.25fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.devis-side,
+.devis-form {
+  min-width: 0;
+  border: 1px solid rgba(207, 173, 120, 0.34);
+  border-radius: 5px;
+  background: rgba(247, 243, 236, 0.74);
+  box-shadow: 0 8px 22px rgba(65, 43, 24, 0.045);
+}
+
+.devis-side {
+  display: grid;
+  align-content: start;
+  padding: 34px 34px 30px;
+}
+
+.devis-side h2 {
+  margin: 0;
+  color: #8a581f;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 31px;
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.devis-side > p {
+  margin: 18px 0 23px;
+  color: #201b15;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.devis-side-card {
+  overflow: hidden;
+  border: 1px solid rgba(207, 173, 120, 0.34);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.34);
+}
+
+.devis-side-card img {
+  width: 100%;
+  height: 168px;
+  object-fit: cover;
+}
+
+.devis-side-card strong,
+.devis-side-card span {
+  display: block;
+  padding: 0 19px;
+}
+
+.devis-side-card strong {
+  margin-top: 17px;
+  color: #2b241d;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.devis-side-card span {
+  margin: 7px 0 18px;
+  color: #332a22;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.42;
+}
+
+.devis-side ul {
+  display: grid;
+  gap: 13px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.devis-side li {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  align-items: center;
+  gap: 12px;
+  color: #302720;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.devis-side li svg {
+  width: 23px;
+  height: 23px;
+  color: #9d621a;
+}
+
+.devis-form {
+  padding: 31px 42px 28px;
+}
+
+.devis-line-title {
+  margin: 0 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: #1f1a14;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.devis-line-title::before,
+.devis-line-title::after {
+  content: "";
+  width: 46px;
+  height: 1px;
+  background: var(--bronze-soft);
+}
+
+.devis-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px 16px;
+}
+
+.devis-field-full {
+  grid-column: 1 / -1;
+}
+
+.devis-form label {
+  display: grid;
+  gap: 8px;
+}
+
+.devis-form label span {
+  color: #2b241d;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.devis-form input,
+.devis-form select,
+.devis-form textarea {
+  width: 100%;
+  height: 36px;
+  border: 1px solid rgba(207, 173, 120, 0.34);
+  border-radius: 3px;
+  color: #6b5a4a;
+  background: rgba(255, 255, 255, 0.36);
+  font-size: 10px;
+  padding: 0 13px;
+}
+
+.devis-form textarea {
+  height: 108px;
+  padding-top: 11px;
+  resize: vertical;
+}
+
+.devis-form input:focus,
+.devis-form select:focus,
+.devis-form textarea:focus {
+  outline: 1px solid var(--bronze-soft);
+  outline-offset: 2px;
+}
+
+.devis-submit {
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  border: 0;
+  border-radius: 2px;
+  color: #ffffff;
+  background: #9d621a;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.devis-submit:hover,
+.devis-submit:focus-visible {
+  background: #8a581f;
+  transform: translateY(-1px);
+}
+
+.devis-form-note {
+  margin: 11px 0 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #5d4637;
+  font-size: 8px;
+}
+
+.devis-form-note svg {
+  width: 11px;
+  height: 11px;
+  color: #9d621a;
+}
+
+.devis-intro a:focus-visible,
+.devis-submit:focus-visible {
+  outline: 1px solid var(--bronze);
+  outline-offset: 3px;
+}
+
 .page-anchor {
   display: block;
   width: 1px;
@@ -5549,6 +5972,34 @@ a.contact-detail-item:focus-visible {
   .contact-hero-subtitle {
     font-size: 15px;
   }
+
+  .devis-hero {
+    height: 430px;
+  }
+
+  .devis-hero-picture {
+    background-position: 60% center;
+  }
+
+  .devis-hero-wash {
+    background:
+      linear-gradient(180deg, rgba(247, 243, 236, 0.76) 0%, rgba(247, 243, 236, 0.92) 35%, rgba(247, 243, 236, 0.42) 100%),
+      linear-gradient(90deg, var(--cream) 0%, rgba(247, 243, 236, 0.84) 60%, rgba(247, 243, 236, 0) 100%);
+  }
+
+  .devis-hero-content {
+    left: 24px;
+    top: 128px;
+    width: min(86vw, 330px);
+  }
+
+  .devis-hero h1 {
+    font-size: 39px;
+  }
+
+  .devis-hero-subtitle {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 1120px) {
@@ -5719,6 +6170,47 @@ a.contact-detail-item:focus-visible {
   .contact-map {
     grid-column: 1;
     grid-row: auto;
+  }
+
+  .devis-page-content {
+    padding: 0 4vw 34px;
+  }
+
+  .devis-intro {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .devis-intro a:nth-child(odd) {
+    border-left: 0;
+  }
+
+  .devis-intro a:nth-child(n + 3) {
+    border-top: 1px solid rgba(207, 173, 120, 0.3);
+  }
+
+  .devis-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .devis-side {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 24px;
+  }
+
+  .devis-side h2,
+  .devis-side > p,
+  .devis-side ul {
+    grid-column: 1;
+  }
+
+  .devis-side-card {
+    grid-column: 2;
+    grid-row: 1 / 4;
+    align-self: stretch;
+  }
+
+  .devis-side-card img {
+    height: 190px;
   }
 
   .collection-page-content {
@@ -6153,6 +6645,69 @@ a.contact-detail-item:focus-visible {
 
   .contact-quote-band img {
     height: 150px;
+  }
+
+  .devis-page-content {
+    padding: 0 20px 28px;
+  }
+
+  .devis-intro,
+  .devis-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .devis-intro a {
+    padding: 16px 10px;
+    border-left: 0;
+  }
+
+  .devis-intro a + a {
+    border-top: 1px solid rgba(207, 173, 120, 0.3);
+    border-left: 0;
+  }
+
+  .devis-intro a:nth-child(n + 3) {
+    border-top: 1px solid rgba(207, 173, 120, 0.3);
+  }
+
+  .devis-side {
+    grid-template-columns: 1fr;
+    padding: 26px 22px 24px;
+  }
+
+  .devis-side h2,
+  .devis-side > p,
+  .devis-side ul,
+  .devis-side-card {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .devis-side h2 {
+    font-size: 28px;
+  }
+
+  .devis-side-card img {
+    height: 160px;
+  }
+
+  .devis-form {
+    padding: 26px 22px 24px;
+  }
+
+  .devis-line-title {
+    gap: 10px;
+    font-size: 15px;
+    line-height: 1.22;
+  }
+
+  .devis-line-title::before,
+  .devis-line-title::after {
+    width: 34px;
+  }
+
+  .devis-field-full {
+    grid-column: auto;
   }
 
   .collection-page-filter-panel {

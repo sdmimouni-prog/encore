@@ -68,6 +68,22 @@ const initUniverseCards = () => {
   });
 };
 
+const initDevisShortcuts = () => {
+  const quoteForm = document.getElementById("devis-form");
+  const shortcutLinks = document.querySelectorAll("[data-devis-type]");
+
+  shortcutLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      const typeSelect = quoteForm?.elements.type;
+      const eventType = link.dataset.devisType;
+
+      if (typeSelect && eventType) {
+        typeSelect.value = eventType;
+      }
+    });
+  });
+};
+
 const initCollectionFilters = () => {
   const filterPanel = document.querySelector("[data-collection-filters]");
 
@@ -264,6 +280,7 @@ const initPage = async () => {
   initMenu();
   initQuoteForm();
   initUniverseCards();
+  initDevisShortcuts();
   initCollectionFilters();
   initCollectionScroller();
   initCinemaFilters();

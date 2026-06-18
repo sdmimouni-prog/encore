@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Demandez un devis ENCORE pour la location de véhicules de collection, mariages, tournages, événements corporate, shootings et food trucks vintage."
+    >
+    <title>Demander un devis - ENCORE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="devis-page" data-page="devis">
+    <div data-include="partials/header.html"></div>
+
+    <main class="devis-page-main" aria-label="Demander un devis ENCORE">
+      <section class="devis-hero" aria-labelledby="devis-hero-title">
+        <div class="devis-hero-picture" aria-hidden="true"></div>
+        <div class="devis-hero-wash" aria-hidden="true"></div>
+        <div class="devis-hero-content">
+          <h1 id="devis-hero-title">Demander<br>un devis</h1>
+          <p class="devis-hero-subtitle">Une expérience sur mesure,<br>pour un véhicule d'exception.</p>
+          <div class="devis-ornament" aria-hidden="true"><span></span></div>
+          <p class="devis-hero-copy">
+            Mariage, tournage, publicité, shooting, événement ou food truck vintage :<br>
+            décrivez votre projet et notre équipe vous répond avec une proposition adaptée.
+          </p>
+        </div>
+      </section>
+
+      <section class="devis-page-content" aria-label="Formulaire de demande de devis">
+        <svg class="devis-page-symbols" aria-hidden="true">
+          <symbol id="devis-icon-rings" viewBox="0 0 24 24">
+            <circle cx="9" cy="13" r="5"></circle>
+            <circle cx="15" cy="13" r="5"></circle>
+            <path d="M12 4l2 3h-4z"></path>
+          </symbol>
+          <symbol id="devis-icon-clap" viewBox="0 0 24 24">
+            <path d="M5 8h14v11H5z"></path>
+            <path d="M5 8l3-5 3 5 3-5 3 5 2-4"></path>
+          </symbol>
+          <symbol id="devis-icon-briefcase" viewBox="0 0 24 24">
+            <rect x="4" y="7" width="16" height="13" rx="1"></rect>
+            <path d="M9 7V5h6v2M4 12h16"></path>
+          </symbol>
+          <symbol id="devis-icon-camera" viewBox="0 0 24 24">
+            <path d="M4 8h4l2-3h4l2 3h4v11H4z"></path>
+            <circle cx="12" cy="14" r="4"></circle>
+          </symbol>
+          <symbol id="devis-icon-truck" viewBox="0 0 24 24">
+            <path d="M3 7h12v10H3zM15 11h4l2 3v3h-6z"></path>
+            <circle cx="7" cy="18" r="2"></circle>
+            <circle cx="18" cy="18" r="2"></circle>
+          </symbol>
+          <symbol id="devis-icon-calendar" viewBox="0 0 24 24">
+            <rect x="4" y="6" width="16" height="14" rx="1"></rect>
+            <path d="M8 3v5M16 3v5M4 11h16"></path>
+          </symbol>
+          <symbol id="devis-icon-shield" viewBox="0 0 24 24">
+            <path d="M12 3l8 3v6c0 5-3.3 8-8 10-4.7-2-8-5-8-10V6z"></path>
+            <path d="M9 12l2 2 4-5"></path>
+          </symbol>
+          <symbol id="devis-icon-user" viewBox="0 0 24 24">
+            <circle cx="12" cy="7" r="4"></circle>
+            <path d="M5 21a7 7 0 0 1 14 0"></path>
+          </symbol>
+          <symbol id="devis-icon-star" viewBox="0 0 24 24">
+            <path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3 6.4 20.2 7.5 14 3 9.6l6.2-.9z"></path>
+          </symbol>
+          <symbol id="devis-icon-lock" viewBox="0 0 24 24">
+            <rect x="5" y="11" width="14" height="10" rx="1"></rect>
+            <path d="M8 11V8a4 4 0 0 1 8 0v3"></path>
+          </symbol>
+        </svg>
+
+        <section class="devis-intro" aria-label="Choisir votre univers">
+          <a href="#devis-form" data-devis-type="Mariage">
+            <svg><use href="#devis-icon-rings"></use></svg>
+            <span>Mariage</span>
+          </a>
+          <a href="#devis-form" data-devis-type="Tournage cinéma">
+            <svg><use href="#devis-icon-clap"></use></svg>
+            <span>Cinéma &amp; publicité</span>
+          </a>
+          <a href="#devis-form" data-devis-type="Événement corporate">
+            <svg><use href="#devis-icon-briefcase"></use></svg>
+            <span>Corporate</span>
+          </a>
+          <a href="#devis-form" data-devis-type="Shooting photo">
+            <svg><use href="#devis-icon-camera"></use></svg>
+            <span>Shooting photo</span>
+          </a>
+          <a href="#devis-form" data-devis-type="Food Trucks & Activations">
+            <svg><use href="#devis-icon-truck"></use></svg>
+            <span>Food trucks</span>
+          </a>
+        </section>
+
+        <section class="devis-layout" aria-label="Votre demande">
+          <aside class="devis-side">
+            <h2>Votre projet<br>mérite une légende</h2>
+            <p>Notre équipe vous accompagne pour sélectionner le véhicule, le format et le niveau de service adaptés à votre événement.</p>
+            <div class="devis-side-card">
+              <img src="assets/collection-page/cards/collection-cta-car.jpg" alt="Rolls Royce de collection" loading="lazy">
+              <strong>Réponse sous 24h</strong>
+              <span>Service confidentiel et accompagnement personnalisé.</span>
+            </div>
+            <ul>
+              <li><svg><use href="#devis-icon-shield"></use></svg> Véhicules authentiques et entretenus</li>
+              <li><svg><use href="#devis-icon-user"></use></svg> Interlocuteur dédié à votre projet</li>
+              <li><svg><use href="#devis-icon-star"></use></svg> Expérience premium du musée</li>
+            </ul>
+          </aside>
+
+          <form class="devis-form" id="devis-form" data-quote-form>
+            <h2 class="devis-line-title"><span>Demande de devis</span></h2>
+            <div class="devis-form-grid">
+              <label>
+                <span>Type d'événement</span>
+                <select name="type" aria-label="Type d'événement">
+                  <option value="">Sélectionner</option>
+                  <option>Mariage</option>
+                  <option>Tournage cinéma</option>
+                  <option>Publicité</option>
+                  <option>Shooting photo</option>
+                  <option>Événement corporate</option>
+                  <option>Food Trucks & Activations</option>
+                </select>
+              </label>
+              <label>
+                <span>Date de l'événement</span>
+                <input name="date" type="text" placeholder="JJ / MM / AAAA">
+              </label>
+              <label>
+                <span>Ville / lieu</span>
+                <input name="location" type="text" placeholder="Ville ou région">
+              </label>
+              <label>
+                <span>Nombre de véhicules</span>
+                <select name="vehicles">
+                  <option>Sélectionner</option>
+                  <option>1 véhicule</option>
+                  <option>2 véhicules</option>
+                  <option>3 véhicules et plus</option>
+                </select>
+              </label>
+              <label>
+                <span>Budget indicatif</span>
+                <select name="budget">
+                  <option>Sélectionner</option>
+                  <option>Moins de 10 000 MAD</option>
+                  <option>10 000 - 25 000 MAD</option>
+                  <option>25 000 - 50 000 MAD</option>
+                  <option>50 000 MAD et plus</option>
+                </select>
+              </label>
+              <label>
+                <span>Véhicule souhaité</span>
+                <input name="vehicle" type="text" placeholder="Rolls Royce, bus, food truck...">
+              </label>
+              <label>
+                <span>Votre nom</span>
+                <input name="name" type="text" placeholder="Votre nom">
+              </label>
+              <label>
+                <span>Téléphone</span>
+                <input name="phone" type="tel" placeholder="06 12 34 56 78">
+              </label>
+              <label>
+                <span>Email</span>
+                <input name="email" type="email" placeholder="Votre email">
+              </label>
+              <label>
+                <span>Délai de réponse souhaité</span>
+                <select name="timing">
+                  <option>Sélectionner</option>
+                  <option>Urgent</option>
+                  <option>Sous 24h</option>
+                  <option>Cette semaine</option>
+                </select>
+              </label>
+              <label class="devis-field-full">
+                <span>Votre message</span>
+                <textarea name="message" placeholder="Décrivez votre projet, le lieu, les horaires, l'ambiance souhaitée..." rows="5"></textarea>
+              </label>
+              <button class="devis-submit devis-field-full" type="submit">
+                Envoyer ma demande
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+            <p class="devis-form-note"><svg><use href="#devis-icon-lock"></use></svg>Vos informations sont confidentielles.</p>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <div data-include="partials/footer.html"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
