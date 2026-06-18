@@ -209,6 +209,50 @@ const initWeddingFilters = () => {
   });
 };
 
+const initFoodTruckFilters = () => {
+  const filterPanel = document.querySelector("[data-food-filters]");
+
+  if (!filterPanel) return;
+
+  const filterButtons = [...filterPanel.querySelectorAll("[data-food-filter]")];
+  const filterLinks = [...document.querySelectorAll("[data-food-filter-link]")];
+  const foodItems = [...document.querySelectorAll("[data-food-item]")];
+  let activeFilter = "";
+
+  const getTags = (item) => (item.dataset.foodTags || "").split(/\s+/).filter(Boolean);
+
+  const applyFilter = (filter) => {
+    activeFilter = activeFilter === filter ? "" : filter;
+
+    filterButtons.forEach((button) => {
+      const isActive = button.dataset.foodFilter === activeFilter;
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-pressed", String(isActive));
+    });
+
+    foodItems.forEach((item) => {
+      const isVisible = !activeFilter || getTags(item).includes(activeFilter);
+      item.classList.toggle("is-filter-hidden", !isVisible);
+    });
+  };
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      applyFilter(button.dataset.foodFilter || "");
+    });
+  });
+
+  filterLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      const matchingButton = filterButtons.find((button) => button.dataset.foodFilter === link.dataset.foodFilterLink);
+
+      if (matchingButton && !matchingButton.classList.contains("is-active")) {
+        applyFilter(matchingButton.dataset.foodFilter || "");
+      }
+    });
+  });
+};
+
 const initPage = async () => {
   try {
     await includePartials();
@@ -224,6 +268,7 @@ const initPage = async () => {
   initCollectionScroller();
   initCinemaFilters();
   initWeddingFilters();
+  initFoodTruckFilters();
 };
 
 initPage();

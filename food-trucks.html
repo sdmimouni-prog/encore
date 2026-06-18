@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="ENCORE propose des food trucks vintage issus de véhicules de collection pour événements privés, corporate, festivals, lancements et activations."
+    >
+    <title>Food Trucks - ENCORE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="food-trucks-page" data-page="food-trucks">
+    <div data-include="partials/header.html"></div>
+
+    <main class="food-trucks-page-main" id="food-trucks" aria-label="Food Trucks Vintage ENCORE">
+      <section class="food-hero" aria-labelledby="food-hero-title">
+        <div class="food-hero-picture" aria-hidden="true"></div>
+        <div class="food-hero-wash" aria-hidden="true"></div>
+        <div class="food-hero-content">
+          <h1 id="food-hero-title">Food Trucks<br>Vintage</h1>
+          <p class="food-hero-subtitle">L'expérience qui régale<br>et marque les esprits.</p>
+          <div class="food-ornament" aria-hidden="true"><span></span></div>
+          <p class="food-hero-copy">
+            Des véhicules de collection transformés en<br>
+            espaces de restauration uniques pour sublimer<br>
+            vos événements.
+          </p>
+          <div class="food-hero-actions">
+            <a class="food-btn food-btn-primary" href="#food-truck-vehicles">Voir les véhicules</a>
+            <a class="food-btn food-btn-ghost" href="#food-truck-project">Demander un devis</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="food-page-content" aria-label="Food trucks, inspirations et demande de devis">
+        <svg class="food-page-symbols" aria-hidden="true">
+          <symbol id="food-icon-cloche" viewBox="0 0 24 24">
+            <path d="M4 17h16M6 17a6 6 0 0 1 12 0M12 8v-3M9 5h6M3 20h18"></path>
+          </symbol>
+          <symbol id="food-icon-truck" viewBox="0 0 24 24">
+            <path d="M3 7h12v10H3zM15 11h4l2 3v3h-6z"></path>
+            <circle cx="7" cy="18" r="2"></circle>
+            <circle cx="18" cy="18" r="2"></circle>
+          </symbol>
+          <symbol id="food-icon-utensils" viewBox="0 0 24 24">
+            <path d="M6 3v18M3 3v5a3 3 0 0 0 6 0V3M14 3v18M14 8c3 0 5-2 5-5"></path>
+          </symbol>
+          <symbol id="food-icon-user" viewBox="0 0 24 24">
+            <circle cx="12" cy="7" r="4"></circle>
+            <path d="M5 21a7 7 0 0 1 14 0"></path>
+          </symbol>
+          <symbol id="food-icon-shield" viewBox="0 0 24 24">
+            <path d="M12 3l8 3v6c0 5-3.3 8-8 10-4.7-2-8-5-8-10V6z"></path>
+            <path d="M9 12l2 2 4-5"></path>
+          </symbol>
+          <symbol id="food-icon-users" viewBox="0 0 24 24">
+            <circle cx="9" cy="8" r="3"></circle>
+            <circle cx="17" cy="9" r="2.4"></circle>
+            <path d="M3 20a6 6 0 0 1 12 0M14 20a5 5 0 0 1 7-4"></path>
+          </symbol>
+          <symbol id="food-icon-case" viewBox="0 0 24 24">
+            <rect x="4" y="7" width="16" height="13" rx="1"></rect>
+            <path d="M9 7V5h6v2M4 12h16"></path>
+          </symbol>
+          <symbol id="food-icon-tent" viewBox="0 0 24 24">
+            <path d="M3 20h18L12 4z"></path>
+            <path d="M12 4v16M8 20l4-7 4 7"></path>
+          </symbol>
+          <symbol id="food-icon-megaphone" viewBox="0 0 24 24">
+            <path d="M4 13h4l10 5V6L8 11H4z"></path>
+            <path d="M8 13l2 6"></path>
+          </symbol>
+          <symbol id="food-icon-rings" viewBox="0 0 24 24">
+            <circle cx="9" cy="13" r="5"></circle>
+            <circle cx="15" cy="13" r="5"></circle>
+            <path d="M12 4l2 3h-4z"></path>
+          </symbol>
+          <symbol id="food-icon-store" viewBox="0 0 24 24">
+            <path d="M4 9h16l-1-5H5zM5 9v11h14V9"></path>
+            <path d="M8 13h8M8 17h8M7 9v3M12 9v3M17 9v3"></path>
+          </symbol>
+          <symbol id="food-icon-star" viewBox="0 0 24 24">
+            <path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3 6.4 20.2 7.5 14 3 9.6l6.2-.9z"></path>
+          </symbol>
+          <symbol id="food-icon-temple" viewBox="0 0 24 24">
+            <path d="M3 8l9-5 9 5zM5 9v10M9 9v10M15 9v10M19 9v10M3 20h18"></path>
+          </symbol>
+          <symbol id="food-icon-chef" viewBox="0 0 24 24">
+            <path d="M7 10a4 4 0 0 1 3-6 4 4 0 0 1 7 2 4 4 0 0 1 1 7H7a3 3 0 0 1 0-6"></path>
+            <path d="M8 13v7h8v-7"></path>
+          </symbol>
+          <symbol id="food-icon-calendar" viewBox="0 0 24 24">
+            <rect x="4" y="6" width="16" height="14" rx="1"></rect>
+            <path d="M8 3v5M16 3v5M4 11h16"></path>
+          </symbol>
+        </svg>
+
+        <section class="food-service-strip" aria-label="Atouts food trucks">
+          <a href="#food-truck-project">
+            <svg><use href="#food-icon-cloche"></use></svg>
+            <span><strong>Expérience unique</strong><em>Un concept original et mémorable</em></span>
+          </a>
+          <a href="#food-truck-project">
+            <svg><use href="#food-icon-truck"></use></svg>
+            <span><strong>Véhicules authentiques</strong><em>Des modèles de collection plein de caractère</em></span>
+          </a>
+          <a href="#food-truck-project">
+            <svg><use href="#food-icon-utensils"></use></svg>
+            <span><strong>Aménagement sur mesure</strong><em>Cuisine équipée selon vos besoins</em></span>
+          </a>
+          <a href="#food-truck-project">
+            <svg><use href="#food-icon-user"></use></svg>
+            <span><strong>Partout au Maroc</strong><em>Livraison et installation sur votre lieu</em></span>
+          </a>
+          <a href="#food-truck-project">
+            <svg><use href="#food-icon-shield"></use></svg>
+            <span><strong>Accompagnement</strong><em>Équipe dédiée pour un service clé en main</em></span>
+          </a>
+        </section>
+
+        <section class="food-finder" aria-labelledby="food-finder-title" data-food-filters>
+          <h2 id="food-finder-title"><span>Trouvez le food truck idéal pour votre événement</span></h2>
+          <div class="food-finder-actions">
+            <button type="button" class="food-filter-card" data-food-filter="prives" aria-pressed="false">
+              <svg><use href="#food-icon-users"></use></svg>
+              <span>Événements<br>privés</span>
+            </button>
+            <button type="button" class="food-filter-card" data-food-filter="corporate" aria-pressed="false">
+              <svg><use href="#food-icon-case"></use></svg>
+              <span>Événements<br>corporate</span>
+            </button>
+            <button type="button" class="food-filter-card" data-food-filter="festival" aria-pressed="false">
+              <svg><use href="#food-icon-tent"></use></svg>
+              <span>Festivals &amp;<br>marchés</span>
+            </button>
+            <button type="button" class="food-filter-card" data-food-filter="lancement" aria-pressed="false">
+              <svg><use href="#food-icon-megaphone"></use></svg>
+              <span>Lancements<br>de produits</span>
+            </button>
+            <button type="button" class="food-filter-card" data-food-filter="mariage" aria-pressed="false">
+              <svg><use href="#food-icon-rings"></use></svg>
+              <span>Mariages &amp;<br>réceptions</span>
+            </button>
+            <button type="button" class="food-filter-card" data-food-filter="popup" aria-pressed="false">
+              <svg><use href="#food-icon-store"></use></svg>
+              <span>Pop-up<br>stores</span>
+            </button>
+            <a class="food-finder-submit" href="#food-truck-vehicles">Voir les véhicules <span aria-hidden="true">›</span></a>
+          </div>
+        </section>
+
+        <section class="food-section" id="food-truck-vehicles" aria-labelledby="food-vehicles-title">
+          <div class="food-section-heading">
+            <h2 id="food-vehicles-title"><span>Nos food trucks vintage</span></h2>
+            <a href="https://www.musee-automobile.ma/collection.html#collection-grid">Voir tous les véhicules <span aria-hidden="true">›</span></a>
+          </div>
+          <div class="food-vehicle-grid">
+            <article class="food-vehicle-card" data-food-item data-food-tags="prives corporate festival mariage popup">
+              <a href="https://www.musee-automobile.ma/vehicule-citroen-hy.html" aria-label="Voir la fiche Citroën Type HY">
+                <img src="assets/food-trucks-page/cards/citroen-type-hy.jpg" alt="Citroën Type HY" loading="lazy">
+                <span class="food-vehicle-body">
+                  <strong>Citroën Type HY</strong>
+                  <em>1960</em>
+                  <span class="food-vehicle-description">Iconique et spacieux, parfait pour toutes vos créations culinaires.</span>
+                  <span class="food-card-icons" aria-hidden="true">
+                    <svg><use href="#food-icon-utensils"></use></svg>
+                    <svg><use href="#food-icon-cloche"></use></svg>
+                    <svg><use href="#food-icon-star"></use></svg>
+                  </span>
+                </span>
+              </a>
+            </article>
+            <article class="food-vehicle-card" data-food-item data-food-tags="prives corporate festival lancement">
+              <a href="https://www.musee-automobile.ma/collection.html#collection-grid" aria-label="Voir la fiche Peugeot D4B">
+                <img src="assets/food-trucks-page/cards/peugeot-d4b.jpg" alt="Peugeot D4B" loading="lazy">
+                <span class="food-vehicle-body">
+                  <strong>Peugeot D4B</strong>
+                  <em>1965</em>
+                  <span class="food-vehicle-description">Charme rétro et grand comptoir de service.</span>
+                  <span class="food-card-icons" aria-hidden="true">
+                    <svg><use href="#food-icon-utensils"></use></svg>
+                    <svg><use href="#food-icon-cloche"></use></svg>
+                    <svg><use href="#food-icon-star"></use></svg>
+                  </span>
+                </span>
+              </a>
+            </article>
+            <article class="food-vehicle-card" data-food-item data-food-tags="prives festival popup">
+              <a href="https://www.musee-automobile.ma/collection.html#collection-grid" aria-label="Voir la fiche Renault Estafette">
+                <img src="assets/food-trucks-page/cards/renault-estafette.jpg" alt="Renault Estafette" loading="lazy">
+                <span class="food-vehicle-body">
+                  <strong>Renault Estafette</strong>
+                  <em>1972</em>
+                  <span class="food-vehicle-description">Compacte et agile, idéale pour vos événements urbains.</span>
+                  <span class="food-card-icons" aria-hidden="true">
+                    <svg><use href="#food-icon-utensils"></use></svg>
+                    <svg><use href="#food-icon-cloche"></use></svg>
+                    <svg><use href="#food-icon-star"></use></svg>
+                  </span>
+                </span>
+              </a>
+            </article>
+            <article class="food-vehicle-card" data-food-item data-food-tags="corporate festival lancement">
+              <a href="https://www.musee-automobile.ma/collection.html#collection-grid" aria-label="Voir la fiche Volvo B655">
+                <img src="assets/food-trucks-page/cards/volvo-b655.jpg" alt="Volvo B655" loading="lazy">
+                <span class="food-vehicle-body">
+                  <strong>Volvo B655</strong>
+                  <em>1963</em>
+                  <span class="food-vehicle-description">Volume généreux et style unique pour une expérience différenciante.</span>
+                  <span class="food-card-icons" aria-hidden="true">
+                    <svg><use href="#food-icon-utensils"></use></svg>
+                    <svg><use href="#food-icon-cloche"></use></svg>
+                    <svg><use href="#food-icon-star"></use></svg>
+                  </span>
+                </span>
+              </a>
+            </article>
+            <article class="food-vehicle-card" data-food-item data-food-tags="corporate festival mariage popup">
+              <a href="https://www.musee-automobile.ma/collection.html#collection-grid" aria-label="Voir la fiche Ford Transit">
+                <img src="assets/food-trucks-page/cards/ford-transit.jpg" alt="Ford Transit" loading="lazy">
+                <span class="food-vehicle-body">
+                  <strong>Ford Transit</strong>
+                  <em>1974</em>
+                  <span class="food-vehicle-description">Robuste et fonctionnel, parfait pour les grands événements.</span>
+                  <span class="food-card-icons" aria-hidden="true">
+                    <svg><use href="#food-icon-utensils"></use></svg>
+                    <svg><use href="#food-icon-cloche"></use></svg>
+                    <svg><use href="#food-icon-star"></use></svg>
+                  </span>
+                </span>
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <section class="food-section food-inspiration-section" aria-labelledby="food-inspirations-title">
+          <h2 class="food-line-title" id="food-inspirations-title"><span>Inspirations</span></h2>
+          <div class="food-inspiration-grid">
+            <a href="#food-truck-project" data-food-filter-link="mariage">
+              <img src="assets/food-trucks-page/cards/inspiration-mariage-boheme.jpg" alt="" loading="lazy">
+              <span>Mariage bohème</span>
+            </a>
+            <a href="#food-truck-project" data-food-filter-link="corporate">
+              <img src="assets/food-trucks-page/cards/inspiration-soiree-entreprise.jpg" alt="" loading="lazy">
+              <span>Soirée d'entreprise</span>
+            </a>
+            <a href="#food-truck-project" data-food-filter-link="festival">
+              <img src="assets/food-trucks-page/cards/inspiration-festival.jpg" alt="" loading="lazy">
+              <span>Festival</span>
+            </a>
+            <a href="#food-truck-project" data-food-filter-link="lancement">
+              <img src="assets/food-trucks-page/cards/inspiration-lancement-produit.jpg" alt="" loading="lazy">
+              <span>Lancement de produit</span>
+            </a>
+            <a href="#food-truck-project" data-food-filter-link="festival">
+              <img src="assets/food-trucks-page/cards/inspiration-marche-gourmand.jpg" alt="" loading="lazy">
+              <span>Marché gourmand</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="food-section food-why-section" aria-labelledby="food-why-title">
+          <h2 class="food-line-title" id="food-why-title"><span>Pourquoi choisir ENCORE ?</span></h2>
+          <div class="food-why-grid">
+            <a href="#food-truck-project">
+              <svg><use href="#food-icon-temple"></use></svg>
+              <strong>Collection exclusive</strong>
+              <span>Véhicules rares et authentiques</span>
+            </a>
+            <a href="#food-truck-project">
+              <svg><use href="#food-icon-chef"></use></svg>
+              <strong>Concept clé en main</strong>
+              <span>De la cuisine à la mise en place</span>
+            </a>
+            <a href="#food-truck-project">
+              <svg><use href="#food-icon-shield"></use></svg>
+              <strong>Qualité &amp; sécurité</strong>
+              <span>Matériel professionnel certifié</span>
+            </a>
+            <a href="#food-truck-project">
+              <svg><use href="#food-icon-utensils"></use></svg>
+              <strong>Personnalisation</strong>
+              <span>À votre image et à vos couleurs</span>
+            </a>
+            <a href="#food-truck-project">
+              <svg><use href="#food-icon-cloche"></use></svg>
+              <strong>Service premium</strong>
+              <span>Accompagnement sur mesure</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="food-project" id="food-truck-project" aria-label="Parlez-nous de votre projet">
+          <div class="food-project-quote">
+            <span aria-hidden="true">“</span>
+            <p>Un food truck vintage,<br>pour une expérience<br>qui a du goût et du style.</p>
+            <strong>ENCORE - COLLECTION VIVANTE</strong>
+            <img src="assets/food-trucks-page/cards/food-form-truck.jpg" alt="" loading="lazy">
+          </div>
+          <form class="food-project-form" data-quote-form>
+            <h2>Parlez-nous de votre projet</h2>
+            <div class="food-form-grid">
+              <label>
+                <span>Type d'événement</span>
+                <select name="type">
+                  <option>Sélectionner</option>
+                  <option>Événement privé</option>
+                  <option>Événement corporate</option>
+                  <option>Festival & marché</option>
+                  <option>Lancement de produit</option>
+                  <option>Mariage & réception</option>
+                  <option>Pop-up store</option>
+                </select>
+              </label>
+              <label>
+                <span>Nombre de convives</span>
+                <select name="guests">
+                  <option>Sélectionner</option>
+                  <option>Moins de 50</option>
+                  <option>50 à 150</option>
+                  <option>150 à 300</option>
+                  <option>Plus de 300</option>
+                </select>
+              </label>
+              <label>
+                <span>Date de l'événement</span>
+                <input type="text" name="date" placeholder="JJ / MM / AAAA">
+              </label>
+              <label>
+                <span>Votre message</span>
+                <textarea name="message" placeholder="Décrivez votre projet..."></textarea>
+              </label>
+              <label>
+                <span>Lieu</span>
+                <input type="text" name="location" placeholder="Ville ou région">
+              </label>
+              <button type="submit">Recevoir mon devis</button>
+            </div>
+            <p class="food-form-note">Vos informations sont confidentielles.</p>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <div data-include="partials/footer.html"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
