@@ -1819,15 +1819,39 @@ textarea {
   border: 1px solid rgba(207, 173, 120, 0.48);
   border-radius: 4px;
   background: rgba(247, 243, 236, 0.62);
+  overflow: visible;
 }
 
 .collection-page-benefits article {
+  position: relative;
   display: grid;
   justify-items: center;
   align-content: center;
   min-width: 0;
   padding: 16px 13px 14px;
   text-align: center;
+  transition: background-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.collection-page-benefits article::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  pointer-events: none;
+  transition: border-color 180ms ease;
+}
+
+.collection-page-benefits article:hover {
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.66);
+  box-shadow: 0 16px 30px rgba(56, 38, 22, 0.14);
+  transform: translateY(-4px);
+}
+
+.collection-page-benefits article:hover::before {
+  border-color: rgba(157, 98, 26, 0.42);
 }
 
 .collection-page-benefits article + article {
@@ -1839,6 +1863,12 @@ textarea {
   height: 30px;
   margin-bottom: 9px;
   color: #9d621a;
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.collection-page-benefits article:hover svg {
+  color: #b67a2a;
+  transform: translateY(-3px) scale(1.08);
 }
 
 .collection-page-benefits strong {
@@ -1850,6 +1880,11 @@ textarea {
   line-height: 1.14;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  transition: color 180ms ease;
+}
+
+.collection-page-benefits article:hover strong {
+  color: #8a581f;
 }
 
 .collection-page-benefits span {
@@ -1859,6 +1894,11 @@ textarea {
   font-family: "Playfair Display", Georgia, serif;
   font-size: 9px;
   line-height: 1.22;
+  transition: color 180ms ease;
+}
+
+.collection-page-benefits article:hover span {
+  color: #2b241d;
 }
 
 .collection-page-cta {
