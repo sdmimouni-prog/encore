@@ -20,11 +20,20 @@
     <div data-include="partials/header.html"></div>
 
     <main class="collection-page-main" aria-label="Collection ENCORE">
-      <section class="collection-hero-wide" aria-label="Notre collection">
-        <img
-          src="assets/collection-page/collection-hero.png"
-          alt="Notre collection - plus de 90 véhicules de collection de 1920 à 1985"
-        >
+      <section class="collection-hero" aria-labelledby="collection-hero-title">
+        <div class="collection-hero-picture" aria-hidden="true"></div>
+        <div class="collection-hero-wash" aria-hidden="true"></div>
+        <div class="collection-hero-content">
+          <span class="collection-hero-kicker">Notre</span>
+          <h1 id="collection-hero-title">Collection</h1>
+          <p class="collection-hero-subtitle">Plus de 90 véhicules<br>de collection</p>
+          <p class="collection-hero-years">1920 <span aria-hidden="true">→</span> 1985</p>
+          <blockquote class="collection-hero-quote">
+            <span aria-hidden="true">“</span>
+            <p>Chaque véhicule possède une histoire.<br>Chaque location lui offre<br>un nouveau chapitre.</p>
+            <span aria-hidden="true">”</span>
+          </blockquote>
+        </div>
       </section>
       <section class="collection-page-content" aria-label="Filtres et véhicules de la collection">
         <svg class="collection-page-symbols" aria-hidden="true">

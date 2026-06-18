@@ -1154,6 +1154,117 @@ textarea {
   position: relative;
 }
 
+.collection-hero {
+  position: relative;
+  width: 100%;
+  height: clamp(430px, 42vw, 704px);
+  overflow: hidden;
+}
+
+.collection-hero-picture {
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/collection-page/collection-hero-slide.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 54%;
+}
+
+.collection-hero-wash {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, var(--cream) 0%, rgba(247, 243, 236, 0.98) 20%, rgba(247, 243, 236, 0.82) 31%, rgba(247, 243, 236, 0.4) 43%, rgba(247, 243, 236, 0) 58%),
+    linear-gradient(180deg, rgba(247, 243, 236, 0.92) 0%, rgba(247, 243, 236, 0.08) 28%, rgba(247, 243, 236, 0) 72%, rgba(247, 243, 236, 0.32) 100%);
+}
+
+.collection-hero-content {
+  position: absolute;
+  z-index: 2;
+  left: max(30px, calc((100vw - var(--content)) / 2 + 47px));
+  top: clamp(143px, 15.1vw, 255px);
+  width: clamp(250px, 24vw, 330px);
+  text-align: center;
+}
+
+.collection-hero-kicker {
+  display: block;
+  margin: 0 0 2px;
+  color: #141414;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(20px, 2.1vw, 32px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.collection-hero h1 {
+  margin: 0;
+  color: #9d621a;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(44px, 4.05vw, 58px);
+  font-weight: 500;
+  line-height: 0.94;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.collection-hero-subtitle {
+  margin: 18px 0 0;
+  color: #141414;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(14px, 1.55vw, 22px);
+  font-weight: 600;
+  line-height: 1.26;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.collection-hero-years {
+  margin: 10px 0 24px;
+  color: #8a581f;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(14px, 1.45vw, 20px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.12em;
+}
+
+.collection-hero-years span {
+  display: inline-block;
+  margin: 0 11px;
+  letter-spacing: 0;
+}
+
+.collection-hero-quote {
+  display: grid;
+  grid-template-columns: 24px 1fr 24px;
+  align-items: start;
+  gap: 6px;
+  margin: 0 auto;
+  color: #181510;
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.collection-hero-quote span {
+  color: #9d621a;
+  font-size: clamp(28px, 2.8vw, 40px);
+  line-height: 0.8;
+}
+
+.collection-hero-quote span:last-child {
+  align-self: end;
+  padding-top: 48px;
+}
+
+.collection-hero-quote p {
+  margin: 0;
+  font-size: clamp(11px, 1.05vw, 15px);
+  font-weight: 600;
+  line-height: 1.45;
+}
+
 .collection-hero-wide,
 .cinema-hero-wide {
   padding-top: clamp(124px, 12vw, 216px);
@@ -4102,6 +4213,47 @@ textarea {
   .collection-hero-wide,
   .cinema-hero-wide {
     padding-top: 86px;
+  }
+
+  .collection-hero {
+    height: 430px;
+  }
+
+  .collection-hero-picture {
+    background-position: 60% center;
+  }
+
+  .collection-hero-wash {
+    background:
+      linear-gradient(180deg, rgba(247, 243, 236, 0.76) 0%, rgba(247, 243, 236, 0.92) 35%, rgba(247, 243, 236, 0.42) 100%),
+      linear-gradient(90deg, var(--cream) 0%, rgba(247, 243, 236, 0.82) 58%, rgba(247, 243, 236, 0) 100%);
+  }
+
+  .collection-hero-content {
+    left: 22px;
+    top: 116px;
+    width: min(84vw, 315px);
+  }
+
+  .collection-hero h1 {
+    font-size: 42px;
+  }
+
+  .collection-hero-subtitle {
+    margin-top: 14px;
+    font-size: 14px;
+  }
+
+  .collection-hero-years {
+    margin-bottom: 17px;
+  }
+
+  .collection-hero-quote {
+    grid-template-columns: 18px 1fr 18px;
+  }
+
+  .collection-hero-quote span:last-child {
+    padding-top: 44px;
   }
 
   .mariages-hero {
