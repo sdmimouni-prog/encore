@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Fiche véhicule ENCORE : Buick Roadmaster 1947, disponible pour mariages, tournages, événements, shootings et activations."
+    >
+    <title>Buick Roadmaster - ENCORE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="vehicle-page" data-page="collection" data-vehicle-slug="buick-roadmaster">
+    <div data-include="partials/header.html"></div>
+
+    <main class="vehicle-page-main" aria-label="Fiche véhicule ENCORE">
+      <section class="vehicle-detail-hero" aria-labelledby="vehicle-title">
+        <div class="vehicle-detail-picture" data-vehicle-hero-picture aria-hidden="true"></div>
+        <div class="vehicle-detail-wash" aria-hidden="true"></div>
+        <div class="vehicle-detail-content">
+          <p class="vehicle-detail-kicker" data-vehicle-kicker></p>
+          <h1 id="vehicle-title" data-vehicle-title>Buick Roadmaster</h1>
+          <p class="vehicle-detail-copy" data-vehicle-copy></p>
+        </div>
+      </section>
+
+      <section class="vehicle-detail-meta" aria-label="Repères du véhicule">
+        <article><strong data-vehicle-year>1947</strong><span>Année</span></article>
+        <article><strong data-vehicle-origin>États-Unis</strong><span>Origine</span></article>
+        <article><strong data-vehicle-period>Années 1940</strong><span>Période</span></article>
+        <article><strong data-vehicle-family>Mariage</strong><span>Univers</span></article>
+      </section>
+
+      <section class="vehicle-detail-page-content">
+        <section class="vehicle-detail-grid" aria-label="Présentation du véhicule">
+          <article class="vehicle-visual-card">
+            <img data-vehicle-main-image src="assets/vehicle-detail/buick-roadmaster.jpg" alt="Buick Roadmaster" loading="lazy">
+          </article>
+          <article class="vehicle-story-card">
+            <h2 class="vehicle-line-title" data-vehicle-story-title></h2>
+            <div data-vehicle-story></div>
+            <div class="vehicle-specs" data-vehicle-specs aria-label="Détails du véhicule"></div>
+          </article>
+        </section>
+
+        <section class="vehicle-usage-grid" data-vehicle-usages aria-label="Usages recommandés"></section>
+
+        <section class="vehicle-source-card" aria-label="Source de la fiche">
+          <div>
+            <h2>Collection vivante</h2>
+            <p>Cette fiche reprend l'esprit patrimonial de la collection et l'adapte aux usages ENCORE : location, événementiel, image et expérience.</p>
+          </div>
+          <a data-vehicle-source href="#" target="_blank" rel="noopener">Voir la source musée</a>
+        </section>
+
+        <section class="vehicle-related-section" aria-labelledby="related-vehicles-title">
+          <h2 class="vehicle-line-title" id="related-vehicles-title"><span>Véhicules associés</span></h2>
+          <div class="vehicle-related-grid" data-vehicle-related></div>
+        </section>
+
+        <section class="vehicle-detail-cta" aria-label="Demander un devis pour ce véhicule">
+          <div>
+            <h2>Un projet avec ce véhicule ?</h2>
+            <p>Notre équipe vous accompagne pour vérifier la disponibilité, le format et la mise en scène idéale.</p>
+          </div>
+          <a data-vehicle-quote href="devis.html">Demander un devis</a>
+        </section>
+      </section>
+    </main>
+
+    <div data-include="partials/footer.html"></div>
+
+    <script src="vehicle-data.js"></script>
+    <script src="script.js"></script>
+    <script src="vehicle-detail.js"></script>
+  </body>
+</html>

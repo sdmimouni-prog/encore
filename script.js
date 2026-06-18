@@ -84,6 +84,31 @@ const initDevisShortcuts = () => {
   });
 };
 
+const initDevisPrefillFromQuery = () => {
+  const quoteForm = document.getElementById("devis-form");
+
+  if (!quoteForm) return;
+
+  const params = new URLSearchParams(window.location.search);
+  const vehicleSlug = params.get("vehicule");
+  const eventType = params.get("type");
+  const typeSelect = quoteForm.elements.type;
+  const vehicleInput = quoteForm.elements.vehicle;
+
+  if (typeSelect && eventType) {
+    const matchingOption = [...typeSelect.options].find((option) => option.textContent === eventType || option.value === eventType);
+
+    if (matchingOption) {
+      typeSelect.value = matchingOption.value || matchingOption.textContent;
+    }
+  }
+
+  if (vehicleInput && vehicleSlug) {
+    const matchingVehicle = (window.ENCORE_VEHICLES || []).find((vehicle) => vehicle.slug === vehicleSlug);
+    vehicleInput.value = matchingVehicle?.name || vehicleSlug.replace(/-/g, " ");
+  }
+};
+
 const initCollectionFilters = () => {
   const filterPanel = document.querySelector("[data-collection-filters]");
 
@@ -281,6 +306,7 @@ const initPage = async () => {
   initQuoteForm();
   initUniverseCards();
   initDevisShortcuts();
+  initDevisPrefillFromQuery();
   initCollectionFilters();
   initCollectionScroller();
   initCinemaFilters();
