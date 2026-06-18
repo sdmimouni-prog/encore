@@ -121,6 +121,50 @@ const initCollectionScroller = () => {
   });
 };
 
+const initCinemaFilters = () => {
+  const filterPanel = document.querySelector("[data-cinema-filters]");
+
+  if (!filterPanel) return;
+
+  const filterButtons = [...filterPanel.querySelectorAll("[data-cinema-filter]")];
+  const filterLinks = [...document.querySelectorAll("[data-cinema-filter-link]")];
+  const cinemaItems = [...document.querySelectorAll("[data-cinema-item]")];
+  let activeFilter = "";
+
+  const getTags = (item) => (item.dataset.cinemaTags || "").split(/\s+/).filter(Boolean);
+
+  const applyFilter = (filter) => {
+    activeFilter = activeFilter === filter ? "" : filter;
+
+    filterButtons.forEach((button) => {
+      const isActive = button.dataset.cinemaFilter === activeFilter;
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-pressed", String(isActive));
+    });
+
+    cinemaItems.forEach((item) => {
+      const isVisible = !activeFilter || getTags(item).includes(activeFilter);
+      item.classList.toggle("is-filter-hidden", !isVisible);
+    });
+  };
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      applyFilter(button.dataset.cinemaFilter || "");
+    });
+  });
+
+  filterLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      const matchingButton = filterButtons.find((button) => button.dataset.cinemaFilter === link.dataset.cinemaFilterLink);
+
+      if (matchingButton && !matchingButton.classList.contains("is-active")) {
+        applyFilter(matchingButton.dataset.cinemaFilter || "");
+      }
+    });
+  });
+};
+
 const initPage = async () => {
   try {
     await includePartials();
@@ -134,6 +178,7 @@ const initPage = async () => {
   initUniverseCards();
   initCollectionFilters();
   initCollectionScroller();
+  initCinemaFilters();
 };
 
 initPage();

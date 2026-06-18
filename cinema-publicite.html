@@ -26,11 +26,315 @@
           alt="Cinéma et Publicité - des véhicules de légende pour donner du caractère à vos projets"
         >
       </section>
-      <img
-        class="cinema-page-artboard"
-        src="assets/cinema-page/cinema-content.png"
-        alt="Authenticité, disponibilité, accompagnement, livraison, assurance, véhicules pour cinéma et publicité, inspirations et formulaire de projet"
-      >
+      <section class="cinema-page-content" aria-label="Services cinéma, véhicules et demande de projet">
+        <svg class="cinema-page-symbols" aria-hidden="true">
+          <symbol id="cinema-icon-shield" viewBox="0 0 24 24">
+            <path d="M12 3l8 3v6c0 5-3.3 8-8 10-4.7-2-8-5-8-10V6z"></path>
+            <path d="M9 12l2 2 4-5"></path>
+          </symbol>
+          <symbol id="cinema-icon-calendar" viewBox="0 0 24 24">
+            <rect x="4" y="6" width="16" height="14" rx="1"></rect>
+            <path d="M8 3v5M16 3v5M4 11h16"></path>
+          </symbol>
+          <symbol id="cinema-icon-user" viewBox="0 0 24 24">
+            <circle cx="12" cy="7" r="4"></circle>
+            <path d="M5 21a7 7 0 0 1 14 0"></path>
+          </symbol>
+          <symbol id="cinema-icon-truck" viewBox="0 0 24 24">
+            <path d="M3 7h12v10H3zM15 11h4l2 3v3h-6z"></path>
+            <circle cx="8" cy="18" r="2"></circle>
+            <circle cx="18" cy="18" r="2"></circle>
+          </symbol>
+          <symbol id="cinema-icon-clap" viewBox="0 0 24 24">
+            <path d="M5 8h14v11H5z"></path>
+            <path d="M5 8l3-5 3 5 3-5 3 5 2-4"></path>
+          </symbol>
+          <symbol id="cinema-icon-screen" viewBox="0 0 24 24">
+            <rect x="4" y="5" width="16" height="11" rx="1"></rect>
+            <path d="M10 20h4M12 16v4"></path>
+          </symbol>
+          <symbol id="cinema-icon-megaphone" viewBox="0 0 24 24">
+            <path d="M4 13h4l10 5V6L8 11H4z"></path>
+            <path d="M8 13l2 6"></path>
+          </symbol>
+          <symbol id="cinema-icon-music" viewBox="0 0 24 24">
+            <path d="M9 18V5l10-2v13"></path>
+            <circle cx="6" cy="18" r="3"></circle>
+            <circle cx="16" cy="16" r="3"></circle>
+          </symbol>
+          <symbol id="cinema-icon-camera" viewBox="0 0 24 24">
+            <path d="M4 8h4l2-3h4l2 3h4v11H4z"></path>
+            <circle cx="12" cy="14" r="4"></circle>
+          </symbol>
+          <symbol id="cinema-icon-star" viewBox="0 0 24 24">
+            <path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3 6.4 20.2 7.5 14 3 9.6l6.2-.9z"></path>
+          </symbol>
+          <symbol id="cinema-icon-car" viewBox="0 0 24 24">
+            <path d="M4 15l2-6h12l2 6"></path>
+            <path d="M3 15h18v4H3z"></path>
+            <circle cx="7" cy="19" r="2"></circle>
+            <circle cx="17" cy="19" r="2"></circle>
+          </symbol>
+          <symbol id="cinema-icon-award" viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M9 12l-2 9 5-3 5 3-2-9"></path>
+          </symbol>
+          <symbol id="cinema-icon-service" viewBox="0 0 24 24">
+            <path d="M12 3l3 5 6 1-4 4 1 6-6-3-6 3 1-6-4-4 6-1z"></path>
+            <path d="M12 8v5"></path>
+          </symbol>
+        </svg>
+
+        <section class="cinema-service-strip" aria-label="Engagements ENCORE pour les productions">
+          <article>
+            <svg><use href="#cinema-icon-shield"></use></svg>
+            <div>
+              <strong>Authenticité</strong>
+              <span>Véhicules d'époque<br>100% authentiques</span>
+            </div>
+          </article>
+          <article>
+            <svg><use href="#cinema-icon-calendar"></use></svg>
+            <div>
+              <strong>Disponibilité</strong>
+              <span>Large flotte et<br>grande flexibilité</span>
+            </div>
+          </article>
+          <article>
+            <svg><use href="#cinema-icon-user"></use></svg>
+            <div>
+              <strong>Accompagnement</strong>
+              <span>Équipe dédiée<br>à votre production</span>
+            </div>
+          </article>
+          <article>
+            <svg><use href="#cinema-icon-truck"></use></svg>
+            <div>
+              <strong>Livraison</strong>
+              <span>Sur tournage<br>partout au Maroc</span>
+            </div>
+          </article>
+          <article>
+            <svg><use href="#cinema-icon-shield"></use></svg>
+            <div>
+              <strong>Assurance</strong>
+              <span>Couverture adaptée<br>aux productions</span>
+            </div>
+          </article>
+        </section>
+
+        <section class="cinema-finder" aria-labelledby="cinema-finder-title" data-cinema-filters>
+          <h2 id="cinema-finder-title"><span>Trouvez le véhicule idéal pour votre production</span></h2>
+          <div class="cinema-finder-actions">
+            <button type="button" class="cinema-filter-card" data-cinema-filter="film" aria-pressed="false">
+              <svg><use href="#cinema-icon-clap"></use></svg>
+              <span>Long métrage</span>
+            </button>
+            <button type="button" class="cinema-filter-card" data-cinema-filter="serie" aria-pressed="false">
+              <svg><use href="#cinema-icon-screen"></use></svg>
+              <span>Série TV</span>
+            </button>
+            <button type="button" class="cinema-filter-card" data-cinema-filter="publicite" aria-pressed="false">
+              <svg><use href="#cinema-icon-megaphone"></use></svg>
+              <span>Publicité</span>
+            </button>
+            <button type="button" class="cinema-filter-card" data-cinema-filter="clip" aria-pressed="false">
+              <svg><use href="#cinema-icon-music"></use></svg>
+              <span>Clip vidéo</span>
+            </button>
+            <button type="button" class="cinema-filter-card" data-cinema-filter="shooting" aria-pressed="false">
+              <svg><use href="#cinema-icon-camera"></use></svg>
+              <span>Shooting photo</span>
+            </button>
+            <a class="cinema-finder-submit" href="#cinema-vehicles">Voir les véhicules <span aria-hidden="true">›</span></a>
+          </div>
+        </section>
+
+        <section class="cinema-section" id="cinema-vehicles" aria-labelledby="cinema-vehicles-title">
+          <div class="cinema-section-heading">
+            <h2 id="cinema-vehicles-title"><span>Nos véhicules pour le cinéma &amp; la publicité</span></h2>
+            <a href="https://www.musee-automobile.ma/collection.html#collection-grid">Voir tous les véhicules <span aria-hidden="true">›</span></a>
+          </div>
+          <div class="cinema-vehicle-grid">
+            <article class="cinema-vehicle-card" data-cinema-item data-cinema-tags="film serie publicite clip shooting">
+              <a href="https://www.musee-automobile.ma/vehicule-rolls-royce-silver-wraith.html" aria-label="Voir la fiche Rolls Royce Silver Wraith">
+                <img src="assets/cinema-page/cards/rolls-royce-silver-wraith.jpg" alt="Rolls Royce Silver Wraith" loading="lazy">
+                <span class="cinema-vehicle-body">
+                  <strong>Rolls Royce<br>Silver Wraith</strong>
+                  <em>1948</em>
+                  <span class="cinema-card-icons" aria-hidden="true">
+                    <svg><use href="#cinema-icon-clap"></use></svg>
+                    <svg><use href="#cinema-icon-camera"></use></svg>
+                    <svg><use href="#cinema-icon-star"></use></svg>
+                  </span>
+                </span>
+              </a>
+            </article>
+            <article class="cinema-vehicle-card" data-cinema-item data-cinema-tags="film publicite clip shooting">
+              <a href="https://www.musee-automobile.ma/vehicule-citroen-hy.html" aria-label="Voir la fiche Citroën Type HY">
+                <img src="assets/cinema-page/cards/citroen-type-hy.jpg" alt="Citroën Type HY" loading="lazy">
+                <span class="cinema-vehicle-body">
+                  <strong>Citroën<br>Type HY</strong>
+                  <em>1960</em>
+                  <span class="cinema-card-icons" aria-hidden="true">
+                    <svg><use href="#cinema-icon-clap"></use></svg>
+                    <svg><use href="#cinema-icon-camera"></use></svg>
+                    <svg><use href="#cinema-icon-star"></use></svg>
+                  </span>
+                </span>
+              </a>
+            </article>
+            <article class="cinema-vehicle-card" data-cinema-item data-cinema-tags="film serie publicite">
+              <a href="https://www.musee-automobile.ma/collection.html#collection-grid" aria-label="Voir la fiche Volvo Bus B615">
+                <img src="assets/cinema-page/cards/volvo-bus-b615.jpg" alt="Volvo Bus B615" loading="lazy">
+                <span class="cinema-vehicle-body">
+                  <strong>Volvo<br>Bus B615</strong>
+                  <em>1966</em>
+                  <span class="cinema-card-icons" aria-hidden="true">
+                    <svg><use href="#cinema-icon-clap"></use></svg>
+                    <svg><use href="#cinema-icon-camera"></use></svg>
+                    <svg><use href="#cinema-icon-star"></use></svg>
+                  </span>
+                </span>
+              </a>
+            </article>
+            <article class="cinema-vehicle-card" data-cinema-item data-cinema-tags="film serie publicite">
+              <a href="https://www.musee-automobile.ma/vehicule-school-bus-ford-b700.html" aria-label="Voir la fiche Ford School Bus B700">
+                <img src="assets/cinema-page/cards/ford-school-bus-b700.jpg" alt="Ford School Bus B700" loading="lazy">
+                <span class="cinema-vehicle-body">
+                  <strong>Ford<br>School Bus B700</strong>
+                  <em>1969</em>
+                  <span class="cinema-card-icons" aria-hidden="true">
+                    <svg><use href="#cinema-icon-clap"></use></svg>
+                    <svg><use href="#cinema-icon-camera"></use></svg>
+                    <svg><use href="#cinema-icon-star"></use></svg>
+                  </span>
+                </span>
+              </a>
+            </article>
+            <article class="cinema-vehicle-card" data-cinema-item data-cinema-tags="film publicite">
+              <a href="https://www.musee-automobile.ma/vehicule-chevrolet-6400-master-truck.html" aria-label="Voir la fiche Chevrolet Master Truck">
+                <img src="assets/cinema-page/cards/chevrolet-master-truck.jpg" alt="Chevrolet Master Truck" loading="lazy">
+                <span class="cinema-vehicle-body">
+                  <strong>Chevrolet<br>Master Truck</strong>
+                  <em>1945</em>
+                  <span class="cinema-card-icons" aria-hidden="true">
+                    <svg><use href="#cinema-icon-clap"></use></svg>
+                    <svg><use href="#cinema-icon-camera"></use></svg>
+                    <svg><use href="#cinema-icon-star"></use></svg>
+                  </span>
+                </span>
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <section class="cinema-section cinema-trust-section" aria-labelledby="cinema-trust-title">
+          <h2 class="cinema-line-title" id="cinema-trust-title"><span>Ils nous font confiance</span></h2>
+          <div class="cinema-trust-grid">
+            <a class="cinema-trust-card" href="#cinema-project-form" data-cinema-filter-link="film">
+              <img src="assets/cinema-page/cards/trust-films.jpg" alt="" loading="lazy">
+              <span>Films</span>
+            </a>
+            <a class="cinema-trust-card" href="#cinema-project-form" data-cinema-filter-link="serie">
+              <img src="assets/cinema-page/cards/trust-series-tv.jpg" alt="" loading="lazy">
+              <span>Séries TV</span>
+            </a>
+            <a class="cinema-trust-card" href="#cinema-project-form" data-cinema-filter-link="publicite">
+              <img src="assets/cinema-page/cards/trust-publicites.jpg" alt="" loading="lazy">
+              <span>Publicités</span>
+            </a>
+            <a class="cinema-trust-card" href="#cinema-project-form" data-cinema-filter-link="clip">
+              <img src="assets/cinema-page/cards/trust-clips-video.jpg" alt="" loading="lazy">
+              <span>Clips vidéo</span>
+            </a>
+            <a class="cinema-trust-card" href="#cinema-project-form" data-cinema-filter-link="shooting">
+              <img src="assets/cinema-page/cards/trust-shootings.jpg" alt="" loading="lazy">
+              <span>Shootings</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="cinema-section cinema-why-section" aria-labelledby="cinema-why-title">
+          <h2 class="cinema-line-title" id="cinema-why-title"><span>Pourquoi choisir ENCORE ?</span></h2>
+          <div class="cinema-why-grid">
+            <a href="#cinema-project-form">
+              <svg><use href="#cinema-icon-star"></use></svg>
+              <strong>Collection unique</strong>
+              <span>Des modèles rares et iconiques</span>
+            </a>
+            <a href="#cinema-project-form">
+              <svg><use href="#cinema-icon-car"></use></svg>
+              <strong>État exceptionnel</strong>
+              <span>Véhicules entretenus<br>avec le plus grand soin</span>
+            </a>
+            <a href="#cinema-project-form">
+              <svg><use href="#cinema-icon-award"></use></svg>
+              <strong>Expérience</strong>
+              <span>Plus de 20 ans d'expertise<br>au service de vos projets</span>
+            </a>
+            <a href="#cinema-project-form">
+              <svg><use href="#cinema-icon-service"></use></svg>
+              <strong>Service sur mesure</strong>
+              <span>Solutions adaptées à chaque<br>besoin de production</span>
+            </a>
+            <a href="#cinema-project-form">
+              <svg><use href="#cinema-icon-star"></use></svg>
+              <strong>Valorisation visuelle</strong>
+              <span>Un rendu authentique<br>et haut de gamme</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="cinema-project" id="cinema-project-form" aria-label="Parlez-nous de votre projet">
+          <div class="cinema-project-quote">
+            <span aria-hidden="true">“</span>
+            <p>Le détail qui fait la différence<br>à l’écran, c’est l’authenticité.</p>
+            <strong>ENCORE — COLLECTION VIVANTE</strong>
+          </div>
+          <form class="cinema-project-form" data-quote-form>
+            <h2>Parlez-nous de votre projet</h2>
+            <div class="cinema-form-grid">
+              <label>
+                <span>Type de projet</span>
+                <select name="type">
+                  <option>Sélectionner</option>
+                  <option>Long métrage</option>
+                  <option>Série TV</option>
+                  <option>Publicité</option>
+                  <option>Clip vidéo</option>
+                  <option>Shooting photo</option>
+                </select>
+              </label>
+              <label>
+                <span>Véhicules souhaités</span>
+                <select name="vehicles">
+                  <option>Sélectionner</option>
+                  <option>Rolls Royce Silver Wraith</option>
+                  <option>Citroën Type HY</option>
+                  <option>Volvo Bus B615</option>
+                  <option>Ford School Bus B700</option>
+                  <option>Chevrolet Master Truck</option>
+                </select>
+              </label>
+              <label>
+                <span>Date(s) de tournage</span>
+                <input type="text" name="date" placeholder="JJ / MM / AAAA">
+              </label>
+              <label>
+                <span>Votre message</span>
+                <textarea name="message" placeholder="Décrivez votre projet..."></textarea>
+              </label>
+              <label>
+                <span>Lieu de tournage</span>
+                <input type="text" name="location" placeholder="Ville ou région">
+              </label>
+              <button type="submit">Envoyer ma demande</button>
+            </div>
+            <p class="cinema-form-note">Vos informations sont confidentielles.</p>
+          </form>
+        </section>
+      </section>
     </main>
 
     <div data-include="partials/footer.html"></div>
