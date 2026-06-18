@@ -26,11 +26,422 @@
           alt="Notre collection - plus de 90 véhicules de collection de 1920 à 1985"
         >
       </section>
-      <img
-        class="collection-page-artboard"
-        src="assets/collection-page/collection-content.png"
-        alt="Notre collection - plus de 90 véhicules de collection, filtres, véhicules incontournables et catégories de véhicules"
-      >
+      <section class="collection-page-content" aria-label="Filtres et véhicules de la collection">
+        <svg class="collection-page-symbols" aria-hidden="true">
+          <symbol id="collection-icon-grid" viewBox="0 0 24 24">
+            <rect x="4" y="4" width="6" height="6"></rect>
+            <rect x="14" y="4" width="6" height="6"></rect>
+            <rect x="4" y="14" width="6" height="6"></rect>
+            <rect x="14" y="14" width="6" height="6"></rect>
+          </symbol>
+          <symbol id="collection-icon-rings" viewBox="0 0 24 24">
+            <circle cx="9" cy="13" r="5"></circle>
+            <circle cx="15" cy="13" r="5"></circle>
+            <path d="M12 4l2 3h-4z"></path>
+          </symbol>
+          <symbol id="collection-icon-clap" viewBox="0 0 24 24">
+            <path d="M5 8h14v11H5z"></path>
+            <path d="M5 8l3-5 3 5 3-5 3 5 2-4"></path>
+          </symbol>
+          <symbol id="collection-icon-pin" viewBox="0 0 24 24">
+            <path d="M12 21s7-7.2 7-12a7 7 0 0 0-14 0c0 4.8 7 12 7 12z"></path>
+            <circle cx="12" cy="9" r="2.4"></circle>
+          </symbol>
+          <symbol id="collection-icon-case" viewBox="0 0 24 24">
+            <rect x="4" y="8" width="16" height="11" rx="1"></rect>
+            <path d="M9 8V5h6v3M4 12h16"></path>
+          </symbol>
+          <symbol id="collection-icon-truck" viewBox="0 0 24 24">
+            <path d="M3 7h12v10H3zM15 11h4l2 3v3h-6z"></path>
+            <circle cx="8" cy="18" r="2"></circle>
+            <circle cx="18" cy="18" r="2"></circle>
+          </symbol>
+          <symbol id="collection-icon-chair" viewBox="0 0 24 24">
+            <circle cx="10" cy="5" r="2"></circle>
+            <path d="M10 8v5h5l3 6M8 11a5 5 0 1 0 5 7"></path>
+          </symbol>
+          <symbol id="collection-icon-diamond" viewBox="0 0 24 24">
+            <path d="M6 5h12l4 5-10 10L2 10z"></path>
+            <path d="M6 5l6 15 6-15M2 10h20"></path>
+          </symbol>
+          <symbol id="collection-icon-crown" viewBox="0 0 24 24">
+            <path d="M4 18h16M5 16l1-9 5 5 1-8 5 8 5-5 1 9z"></path>
+          </symbol>
+          <symbol id="collection-icon-temple" viewBox="0 0 24 24">
+            <path d="M3 8l9-5 9 5zM5 9v10M9 9v10M15 9v10M19 9v10M3 20h18"></path>
+          </symbol>
+          <symbol id="collection-icon-shield" viewBox="0 0 24 24">
+            <path d="M12 3l8 3v6c0 5-3.3 8-8 10-4.7-2-8-5-8-10V6z"></path>
+            <path d="M9 12l2 2 4-5"></path>
+          </symbol>
+          <symbol id="collection-icon-users" viewBox="0 0 24 24">
+            <circle cx="9" cy="8" r="3"></circle>
+            <circle cx="17" cy="9" r="2.4"></circle>
+            <path d="M3 20a6 6 0 0 1 12 0M14 20a5 5 0 0 1 7-4"></path>
+          </symbol>
+          <symbol id="collection-icon-calendar" viewBox="0 0 24 24">
+            <rect x="4" y="6" width="16" height="14" rx="1"></rect>
+            <path d="M8 3v5M16 3v5M4 11h16"></path>
+          </symbol>
+          <symbol id="collection-icon-star" viewBox="0 0 24 24">
+            <path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3 6.4 20.2 7.5 14 3 9.6l6.2-.9z"></path>
+          </symbol>
+        </svg>
+
+        <div class="collection-page-filter-panel" data-collection-filters>
+          <div class="collection-page-filter-row collection-page-filter-row-primary" aria-label="Univers de location">
+            <button class="collection-page-filter is-active" type="button" data-collection-filter="all" aria-pressed="true">
+              <svg><use href="#collection-icon-grid"></use></svg>
+              <span>Tous</span>
+            </button>
+            <button class="collection-page-filter" type="button" data-collection-filter="mariage" aria-pressed="false">
+              <svg><use href="#collection-icon-rings"></use></svg>
+              <span>Mariages</span>
+            </button>
+            <button class="collection-page-filter" type="button" data-collection-filter="cinema" aria-pressed="false">
+              <svg><use href="#collection-icon-clap"></use></svg>
+              <span>Cinéma</span>
+            </button>
+            <button class="collection-page-filter" type="button" data-collection-filter="tours" aria-pressed="false">
+              <svg><use href="#collection-icon-pin"></use></svg>
+              <span>Tours Vintage</span>
+            </button>
+            <button class="collection-page-filter" type="button" data-collection-filter="corporate" aria-pressed="false">
+              <svg><use href="#collection-icon-case"></use></svg>
+              <span>Corporate</span>
+            </button>
+            <button class="collection-page-filter" type="button" data-collection-filter="food-trucks" aria-pressed="false">
+              <svg><use href="#collection-icon-truck"></use></svg>
+              <span>Food Trucks</span>
+            </button>
+          </div>
+          <div class="collection-page-filter-row collection-page-filter-row-secondary" aria-label="Catégories de véhicules">
+            <button class="collection-page-filter is-active" type="button" data-collection-filter="all" aria-pressed="true">
+              <span>Toutes catégories</span>
+            </button>
+            <button class="collection-page-filter" type="button" data-collection-filter="voiture" aria-pressed="false">
+              <span>Voitures</span>
+            </button>
+            <button class="collection-page-filter" type="button" data-collection-filter="bus" aria-pressed="false">
+              <span>Bus</span>
+            </button>
+            <button class="collection-page-filter" type="button" data-collection-filter="camion" aria-pressed="false">
+              <span>Camions</span>
+            </button>
+            <button class="collection-page-filter" type="button" data-collection-filter="utilitaire" aria-pressed="false">
+              <span>Utilitaires</span>
+            </button>
+            <button class="collection-page-filter" type="button" data-collection-filter="accessible" aria-pressed="false">
+              <svg><use href="#collection-icon-chair"></use></svg>
+              <span>Accessible</span>
+            </button>
+            <button class="collection-page-filter" type="button" data-collection-filter="premium" aria-pressed="false">
+              <svg><use href="#collection-icon-diamond"></use></svg>
+              <span>Premium</span>
+            </button>
+            <button class="collection-page-filter" type="button" data-collection-filter="exception" aria-pressed="false">
+              <svg><use href="#collection-icon-crown"></use></svg>
+              <span>Exception</span>
+            </button>
+          </div>
+        </div>
+
+        <section class="collection-page-showcase" aria-labelledby="collection-featured-title">
+          <h2 class="collection-page-line-title" id="collection-featured-title"><span>Les incontournables</span></h2>
+          <div class="collection-page-feature-wrap">
+            <button class="collection-page-arrow collection-page-arrow-prev" type="button" aria-label="Voir les véhicules précédents" data-collection-scroll="prev" data-collection-scroll-target="featured-vehicles">
+              <span aria-hidden="true"></span>
+            </button>
+            <div class="collection-page-feature-grid" id="featured-vehicles">
+              <article class="collection-page-vehicle-card collection-page-vehicle-card-featured" data-collection-item data-collection-tags="voiture exception premium mariage cinema">
+                <a href="musee-automobile/vehicule-rolls-royce-silver-wraith.html" aria-label="Voir la fiche Rolls Royce Silver Wraith">
+                  <img src="assets/collection-page/cards/rolls-wraith-featured.jpg" alt="Rolls Royce Silver Wraith" loading="lazy">
+                  <span class="collection-page-card-body">
+                    <strong>Rolls Royce<br>Silver Wraith</strong>
+                    <em>1948</em>
+                    <span class="collection-page-card-label"><svg><use href="#collection-icon-crown"></use></svg>Exception</span>
+                  </span>
+                </a>
+              </article>
+              <article class="collection-page-vehicle-card collection-page-vehicle-card-featured" data-collection-item data-collection-tags="voiture exception premium mariage">
+                <a href="musee-automobile/vehicule-cadillac-eldorado-5e-generation.html" aria-label="Voir la fiche Cadillac Series 62">
+                  <img src="assets/collection-page/cards/cadillac-series-62-featured.jpg" alt="Cadillac Series 62" loading="lazy">
+                  <span class="collection-page-card-body">
+                    <strong>Cadillac<br>Series 62</strong>
+                    <em>1952</em>
+                    <span class="collection-page-card-label"><svg><use href="#collection-icon-star"></use></svg>Exception</span>
+                  </span>
+                </a>
+              </article>
+              <article class="collection-page-vehicle-card collection-page-vehicle-card-featured" data-collection-item data-collection-tags="utilitaire accessible cinema food-trucks tours">
+                <a href="musee-automobile/vehicule-volkswagen-combi-t2-bay-window.html" aria-label="Voir la fiche Volkswagen Combi T2">
+                  <img src="assets/collection-page/cards/vw-combi-t2-featured.jpg" alt="Volkswagen Combi T2" loading="lazy">
+                  <span class="collection-page-card-body">
+                    <strong>Volkswagen<br>Combi T2</strong>
+                    <em>1975</em>
+                    <span class="collection-page-card-label"><svg><use href="#collection-icon-chair"></use></svg>Accessible</span>
+                  </span>
+                </a>
+              </article>
+              <article class="collection-page-vehicle-card collection-page-vehicle-card-featured" data-collection-item data-collection-tags="bus premium corporate cinema tours">
+                <a href="musee-automobile/vehicule-autocar-volvo-60.html" aria-label="Voir la fiche Autocar Volvo 60">
+                  <img src="assets/collection-page/cards/autocar-volvo-60-featured.jpg" alt="Autocar Volvo 60" loading="lazy">
+                  <span class="collection-page-card-body">
+                    <strong>Autocar<br>Volvo 60</strong>
+                    <em>1968</em>
+                    <span class="collection-page-card-label"><svg><use href="#collection-icon-case"></use></svg>Premium</span>
+                  </span>
+                </a>
+              </article>
+              <article class="collection-page-vehicle-card collection-page-vehicle-card-featured" data-collection-item data-collection-tags="utilitaire accessible cinema food-trucks corporate">
+                <a href="musee-automobile/vehicule-citroen-hy.html" aria-label="Voir la fiche Citroën HY">
+                  <img src="assets/collection-page/cards/citroen-hy-featured.jpg" alt="Citroën HY" loading="lazy">
+                  <span class="collection-page-card-body">
+                    <strong>Citroën<br>HY</strong>
+                    <em>1979</em>
+                    <span class="collection-page-card-label"><svg><use href="#collection-icon-chair"></use></svg>Accessible</span>
+                  </span>
+                </a>
+              </article>
+            </div>
+            <button class="collection-page-arrow collection-page-arrow-next" type="button" aria-label="Voir les véhicules suivants" data-collection-scroll="next" data-collection-scroll-target="featured-vehicles">
+              <span aria-hidden="true"></span>
+            </button>
+          </div>
+        </section>
+
+        <section class="collection-page-section" aria-labelledby="exception-title" data-collection-section>
+          <div class="collection-page-section-head">
+            <h2 id="exception-title">Véhicules d'exception</h2>
+            <a href="musee-automobile/collection.html#collection-grid">Voir tout</a>
+          </div>
+          <div class="collection-page-grid collection-page-grid-large">
+            <article class="collection-page-vehicle-card" data-collection-item data-collection-tags="voiture exception premium mariage cinema">
+              <a href="musee-automobile/vehicule-rolls-royce-silver-wraith.html" aria-label="Voir la fiche Rolls Royce Silver Wraith">
+                <img src="assets/collection-page/cards/rolls-wraith-exception.jpg" alt="Rolls Royce Silver Wraith" loading="lazy">
+                <span class="collection-page-card-body">
+                  <strong>Rolls Royce<br>Silver Wraith</strong>
+                  <em>1948 · Royaume-Uni</em>
+                  <span class="collection-page-icons" aria-hidden="true">
+                    <svg><use href="#collection-icon-rings"></use></svg>
+                    <svg><use href="#collection-icon-clap"></use></svg>
+                    <svg><use href="#collection-icon-case"></use></svg>
+                  </span>
+                  <span class="collection-page-card-cta">Voir la fiche</span>
+                </span>
+              </a>
+            </article>
+            <article class="collection-page-vehicle-card" data-collection-item data-collection-tags="voiture exception premium mariage">
+              <a href="musee-automobile/vehicule-cadillac-eldorado-5e-generation.html" aria-label="Voir la fiche Cadillac Series 62">
+                <img src="assets/collection-page/cards/cadillac-series-62-exception.jpg" alt="Cadillac Series 62" loading="lazy">
+                <span class="collection-page-card-body">
+                  <strong>Cadillac<br>Series 62</strong>
+                  <em>1952 · États-Unis</em>
+                  <span class="collection-page-icons" aria-hidden="true">
+                    <svg><use href="#collection-icon-chair"></use></svg>
+                    <svg><use href="#collection-icon-clap"></use></svg>
+                    <svg><use href="#collection-icon-case"></use></svg>
+                  </span>
+                  <span class="collection-page-card-cta">Voir la fiche</span>
+                </span>
+              </a>
+            </article>
+            <article class="collection-page-vehicle-card" data-collection-item data-collection-tags="voiture premium corporate mariage">
+              <a href="musee-automobile/collection.html#collection-grid" aria-label="Voir la fiche Mercedes-Benz 600">
+                <img src="assets/collection-page/cards/mercedes-benz-600.jpg" alt="Mercedes-Benz 600" loading="lazy">
+                <span class="collection-page-card-body">
+                  <strong>Mercedes-Benz<br>600</strong>
+                  <em>1965 · Allemagne</em>
+                  <span class="collection-page-icons" aria-hidden="true">
+                    <svg><use href="#collection-icon-rings"></use></svg>
+                    <svg><use href="#collection-icon-clap"></use></svg>
+                    <svg><use href="#collection-icon-case"></use></svg>
+                  </span>
+                  <span class="collection-page-card-cta">Voir la fiche</span>
+                </span>
+              </a>
+            </article>
+            <article class="collection-page-vehicle-card" data-collection-item data-collection-tags="voiture exception premium mariage">
+              <a href="musee-automobile/vehicule-mercedes-benz-220-b-usa.html" aria-label="Voir la fiche Mercedes-Benz 220S">
+                <img src="assets/collection-page/cards/mercedes-benz-220s.jpg" alt="Mercedes-Benz 220S" loading="lazy">
+                <span class="collection-page-card-body">
+                  <strong>Mercedes-Benz<br>220S</strong>
+                  <em>1957 · Allemagne</em>
+                  <span class="collection-page-icons" aria-hidden="true">
+                    <svg><use href="#collection-icon-rings"></use></svg>
+                    <svg><use href="#collection-icon-case"></use></svg>
+                  </span>
+                  <span class="collection-page-card-cta">Voir la fiche</span>
+                </span>
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <section class="collection-page-section" aria-labelledby="cinema-title" data-collection-section>
+          <div class="collection-page-section-head">
+            <h2 id="cinema-title">Collection cinéma</h2>
+            <a href="cinema-publicite.html">Voir tout</a>
+          </div>
+          <div class="collection-page-grid collection-page-grid-large">
+            <article class="collection-page-vehicle-card" data-collection-item data-collection-tags="voiture cinema mariage">
+              <a href="musee-automobile/vehicule-citroen-traction-11bl.html" aria-label="Voir la fiche Citroën Traction Avant">
+                <img src="assets/collection-page/cards/citroen-traction-avant.jpg" alt="Citroën Traction Avant" loading="lazy">
+                <span class="collection-page-card-body">
+                  <strong>Citroën<br>Traction Avant</strong>
+                  <em>1952 · France</em>
+                  <span class="collection-page-icons" aria-hidden="true">
+                    <svg><use href="#collection-icon-rings"></use></svg>
+                    <svg><use href="#collection-icon-clap"></use></svg>
+                  </span>
+                  <span class="collection-page-card-cta">Voir la fiche</span>
+                </span>
+              </a>
+            </article>
+            <article class="collection-page-vehicle-card" data-collection-item data-collection-tags="utilitaire accessible cinema food-trucks tours">
+              <a href="musee-automobile/vehicule-volkswagen-combi-t2-bay-window.html" aria-label="Voir la fiche Volkswagen Combi T2">
+                <img src="assets/collection-page/cards/vw-combi-t2-cinema.jpg" alt="Volkswagen Combi T2" loading="lazy">
+                <span class="collection-page-card-body">
+                  <strong>Volkswagen<br>Combi T2</strong>
+                  <em>1975 · Allemagne</em>
+                  <span class="collection-page-icons" aria-hidden="true">
+                    <svg><use href="#collection-icon-case"></use></svg>
+                    <svg><use href="#collection-icon-clap"></use></svg>
+                  </span>
+                  <span class="collection-page-card-cta">Voir la fiche</span>
+                </span>
+              </a>
+            </article>
+            <article class="collection-page-vehicle-card" data-collection-item data-collection-tags="voiture accessible cinema tours">
+              <a href="musee-automobile/vehicule-citroen-2cv.html" aria-label="Voir la fiche Citroën 2CV">
+                <img src="assets/collection-page/cards/citroen-2cv.jpg" alt="Citroën 2CV" loading="lazy">
+                <span class="collection-page-card-body">
+                  <strong>Citroën<br>2CV</strong>
+                  <em>1966 · France</em>
+                  <span class="collection-page-icons" aria-hidden="true">
+                    <svg><use href="#collection-icon-clap"></use></svg>
+                    <svg><use href="#collection-icon-case"></use></svg>
+                  </span>
+                  <span class="collection-page-card-cta">Voir la fiche</span>
+                </span>
+              </a>
+            </article>
+            <article class="collection-page-vehicle-card" data-collection-item data-collection-tags="utilitaire accessible cinema food-trucks corporate">
+              <a href="musee-automobile/vehicule-citroen-hy.html" aria-label="Voir la fiche Citroën HY">
+                <img src="assets/collection-page/cards/citroen-hy-cinema.jpg" alt="Citroën HY" loading="lazy">
+                <span class="collection-page-card-body">
+                  <strong>Citroën<br>HY</strong>
+                  <em>1979 · France</em>
+                  <span class="collection-page-icons" aria-hidden="true">
+                    <svg><use href="#collection-icon-clap"></use></svg>
+                    <svg><use href="#collection-icon-case"></use></svg>
+                  </span>
+                  <span class="collection-page-card-cta">Voir la fiche</span>
+                </span>
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <div class="collection-page-split">
+          <section class="collection-page-section collection-page-section-compact" aria-labelledby="corporate-title" data-collection-section>
+            <div class="collection-page-section-head">
+              <h2 id="corporate-title">Collection corporate</h2>
+              <a href="index.html#devis">Voir tout</a>
+            </div>
+            <div class="collection-page-grid collection-page-grid-small">
+              <article class="collection-page-mini-card" data-collection-item data-collection-tags="bus premium corporate cinema tours">
+                <a href="musee-automobile/vehicule-autocar-volvo-60.html" aria-label="Voir la fiche Autocar Volvo 60">
+                  <img src="assets/collection-page/cards/autocar-volvo-60-corporate.jpg" alt="Autocar Volvo 60" loading="lazy">
+                  <strong>Autocar<br>Volvo 60</strong>
+                  <em>1968 · Suède</em>
+                </a>
+              </article>
+              <article class="collection-page-mini-card" data-collection-item data-collection-tags="bus corporate cinema tours">
+                <a href="musee-automobile/vehicule-school-bus-ford-b700.html" aria-label="Voir la fiche School Bus Ford B700">
+                  <img src="assets/collection-page/cards/school-bus-ford-b700.jpg" alt="School Bus Ford B700" loading="lazy">
+                  <strong>School Bus<br>Ford B700</strong>
+                  <em>1985 · États-Unis</em>
+                </a>
+              </article>
+              <article class="collection-page-mini-card" data-collection-item data-collection-tags="camion utilitaire corporate cinema">
+                <a href="musee-automobile/vehicule-chevrolet-6400-napco.html" aria-label="Voir la fiche Chevrolet 6400 NAPCO">
+                  <img src="assets/collection-page/cards/chevrolet-6400-napco.jpg" alt="Chevrolet 6400 NAPCO" loading="lazy">
+                  <strong>Chevrolet<br>6400 NAPCO</strong>
+                  <em>1956 · États-Unis</em>
+                </a>
+              </article>
+            </div>
+          </section>
+
+          <section class="collection-page-section collection-page-section-compact" aria-labelledby="food-title" data-collection-section>
+            <div class="collection-page-section-head">
+              <h2 id="food-title">Food Trucks &amp; Activations</h2>
+              <a href="index.html#food-trucks">Voir tout</a>
+            </div>
+            <div class="collection-page-grid collection-page-grid-small">
+              <article class="collection-page-mini-card" data-collection-item data-collection-tags="utilitaire accessible food-trucks cinema corporate">
+                <a href="musee-automobile/vehicule-citroen-hy.html" aria-label="Voir la fiche Citroën HY Food Truck">
+                  <img src="assets/collection-page/cards/citroen-hy-food-truck.jpg" alt="Citroën HY Food Truck" loading="lazy">
+                  <strong>Citroën<br>HY Food Truck</strong>
+                  <em>1979 · France</em>
+                </a>
+              </article>
+              <article class="collection-page-mini-card" data-collection-item data-collection-tags="utilitaire food-trucks cinema tours">
+                <a href="musee-automobile/vehicule-volkswagen-combi-t2-bay-window.html" aria-label="Voir la fiche VW Combi T2 Food Truck">
+                  <img src="assets/collection-page/cards/vw-combi-t2-food-truck.jpg" alt="VW Combi T2 Food Truck" loading="lazy">
+                  <strong>VW Combi T2<br>Food Truck</strong>
+                  <em>1975 · Allemagne</em>
+                </a>
+              </article>
+              <article class="collection-page-mini-card" data-collection-item data-collection-tags="utilitaire accessible food-trucks">
+                <a href="musee-automobile/vehicule-citroen-2cv-fourgonnette-type-au.html" aria-label="Voir la fiche Citroën 2CV Fourgonnette">
+                  <img src="assets/collection-page/cards/citroen-2cv-fourgonnette.jpg" alt="Citroën 2CV Fourgonnette" loading="lazy">
+                  <strong>Citroën 2CV<br>Fourgonnette</strong>
+                  <em>1979 · France</em>
+                </a>
+              </article>
+            </div>
+          </section>
+        </div>
+
+        <section class="collection-page-benefits" aria-label="Atouts de la collection">
+          <article>
+            <svg><use href="#collection-icon-temple"></use></svg>
+            <strong>Collection<br>authentique</strong>
+            <span>Des véhicules d'origine,<br>entretenus avec passion.</span>
+          </article>
+          <article>
+            <svg><use href="#collection-icon-shield"></use></svg>
+            <strong>Disponibilité<br>nationale</strong>
+            <span>Livraison partout<br>au Maroc.</span>
+          </article>
+          <article>
+            <svg><use href="#collection-icon-users"></use></svg>
+            <strong>Accompagnement<br>sur-mesure</strong>
+            <span>Un interlocuteur dédié<br>à votre projet.</span>
+          </article>
+          <article>
+            <svg><use href="#collection-icon-calendar"></use></svg>
+            <strong>Expérience<br>mémorable</strong>
+            <span>Des véhicules qui marquent<br>les esprits.</span>
+          </article>
+          <article>
+            <svg><use href="#collection-icon-star"></use></svg>
+            <strong>Plus de 90 véhicules<br>de collection</strong>
+            <span>De 1920 à 1985,<br>pour tous vos projets.</span>
+          </article>
+        </section>
+
+        <section class="collection-page-cta" aria-label="Demander un devis">
+          <img src="assets/collection-page/cards/collection-cta-car.jpg" alt="Rolls Royce de collection" loading="lazy">
+          <div>
+            <h2>Un projet en tête ?</h2>
+            <p>Notre équipe vous accompagne pour sélectionner<br>le véhicule idéal pour votre événement.</p>
+          </div>
+          <a href="index.html#devis">Demander un devis <span aria-hidden="true">→</span></a>
+        </section>
+      </section>
     </main>
 
     <div data-include="partials/footer.html"></div>

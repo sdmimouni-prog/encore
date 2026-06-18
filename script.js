@@ -68,6 +68,59 @@ const initUniverseCards = () => {
   });
 };
 
+const initCollectionFilters = () => {
+  const filterPanel = document.querySelector("[data-collection-filters]");
+
+  if (!filterPanel) return;
+
+  const filterButtons = [...filterPanel.querySelectorAll("[data-collection-filter]")];
+  const collectionItems = [...document.querySelectorAll("[data-collection-item]")];
+  const collectionSections = [...document.querySelectorAll("[data-collection-section]")];
+
+  const getItemTags = (item) => (item.dataset.collectionTags || "").split(/\s+/).filter(Boolean);
+
+  const applyFilter = (filter) => {
+    filterButtons.forEach((button) => {
+      const isActive = button.dataset.collectionFilter === filter;
+      const isAllActive = filter === "all" && button.dataset.collectionFilter === "all";
+
+      button.classList.toggle("is-active", isActive || isAllActive);
+      button.setAttribute("aria-pressed", String(isActive || isAllActive));
+    });
+
+    collectionItems.forEach((item) => {
+      const isVisible = filter === "all" || getItemTags(item).includes(filter);
+      item.classList.toggle("is-filter-hidden", !isVisible);
+    });
+
+    collectionSections.forEach((section) => {
+      const hasVisibleItem = section.querySelector("[data-collection-item]:not(.is-filter-hidden)");
+      section.classList.toggle("is-filter-hidden", !hasVisibleItem);
+    });
+  };
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      applyFilter(button.dataset.collectionFilter || "all");
+    });
+  });
+
+  applyFilter("all");
+};
+
+const initCollectionScroller = () => {
+  document.querySelectorAll("[data-collection-scroll]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const target = document.getElementById(button.dataset.collectionScrollTarget);
+
+      if (!target) return;
+
+      const direction = button.dataset.collectionScroll === "next" ? 1 : -1;
+      target.scrollBy({ left: target.clientWidth * direction, behavior: "smooth" });
+    });
+  });
+};
+
 const initPage = async () => {
   try {
     await includePartials();
@@ -79,6 +132,8 @@ const initPage = async () => {
   initMenu();
   initQuoteForm();
   initUniverseCards();
+  initCollectionFilters();
+  initCollectionScroller();
 };
 
 initPage();
