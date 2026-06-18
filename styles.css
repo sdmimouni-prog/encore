@@ -1660,9 +1660,9 @@ textarea {
 }
 
 .collection-page-cta {
-  min-height: 76px;
+  min-height: 88px;
   display: grid;
-  grid-template-columns: 280px 1fr 197px;
+  grid-template-columns: 280px minmax(0, 1fr) 197px;
   align-items: center;
   overflow: hidden;
   border: 1px solid rgba(207, 173, 120, 0.4);
@@ -1673,18 +1673,24 @@ textarea {
 
 .collection-page-cta img {
   width: 280px;
-  height: 76px;
+  height: 88px;
   object-fit: cover;
   object-position: left center;
   opacity: 0.8;
 }
 
+.collection-page-cta > div {
+  min-width: 0;
+  padding: 0 28px;
+}
+
 .collection-page-cta h2 {
-  margin: 0 0 5px;
+  margin: 0 0 8px;
   color: #2b2118;
   font-family: "Playfair Display", Georgia, serif;
   font-size: 16px;
   font-weight: 500;
+  line-height: 1.08;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -1694,7 +1700,7 @@ textarea {
   color: #2b2118;
   font-family: "Playfair Display", Georgia, serif;
   font-size: 9px;
-  line-height: 1.2;
+  line-height: 1.38;
 }
 
 .collection-page-cta a {
